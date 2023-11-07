@@ -3,12 +3,14 @@
   --black: #1b1717;
   --gray: #3e3939;
   --white: #ffffff;
+  --global-font: "Ubuntu", sans-serif;
 }
 
 html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
 *,
 *:before,
 *:after {
@@ -34,6 +36,8 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: var(--black);
   color: var(--white);
+  font-size: 1.6rem;
+  font-family: var(--global-font);
 }
 
 a {
@@ -58,7 +62,7 @@ ul {
 }
 
 h1 {
-  font-size: 3.8rem;
+  font-size: 5rem;
 }
 
 h2 {
@@ -79,7 +83,7 @@ h3 {
   text-align: center;
 }
 
-img{
+img {
   max-width: 100%;
   display: block; /* para que no se muestre con un espacio abajo */
 }
@@ -89,7 +93,6 @@ img{
 .title {
   color: var(--white);
   text-align: center;
-  font-size: 4.3rem;
   margin: 2rem 0;
 }
 
@@ -129,7 +132,11 @@ img{
   gap: 2rem;
 }
 
-.category a{
+.categories h2 {
+  margin: 4rem 0;
+}
+
+.category a {
   display: block;
   text-align: center;
   padding: 2rem;
@@ -138,18 +145,46 @@ img{
   transition: background-color 0.3s ease-in-out;
 }
 
-.category:hover a{
+.category:hover a {
   background-color: var(--brown);
 }
 
-.img img{
+.img img {
   transition: transform 0.3s ease-in-out;
 }
 
-.category:hover img{
+.category:hover img {
   transform: scale(1.1);
 }
 
-.img{
+.img {
   overflow: hidden;
+}
+
+/* About Us */
+
+.about-us {
+  background-image: linear-gradient(to right, transparent 50%, var(--brown) 50%),
+    url(../img/product1.webp);
+  padding: 8rem 0;
+  background-repeat: no-repeat;
+  background-size: 100%, 120rem;
+  background-position: left center;
+  margin-top: 5rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
+  text-align: center;
+}
+
+.about-text {
+  grid-column: 2 / 3;
+}
+
+.about-text h2,
+.about-text p:last-of-type {
+  margin: 0;
 }
