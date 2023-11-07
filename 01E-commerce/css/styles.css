@@ -124,6 +124,27 @@ img {
   height: 55rem;
 }
 
+/* Utilities */
+
+.text-start {
+  text-align: start;
+}
+
+.btn {
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  display: inline-block;
+  border: 3px solid var(--brown);
+  margin: 2rem;
+  font-weight: 900;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--brown);
+}
+
 /* Categories */
 
 .list-categories {
@@ -176,7 +197,7 @@ img {
 .about-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 5rem;
+  column-gap: 10rem;
   text-align: center;
 }
 
@@ -187,4 +208,118 @@ img {
 .about-text h2,
 .about-text p:last-of-type {
   margin: 0;
+}
+
+/* List of products */
+
+.main-content {
+  margin-top: 5rem;
+}
+
+.product {
+  background-color: var(--gray);
+}
+
+.product-text h3 {
+  margin: 1rem;
+  font-size: 3rem;
+}
+
+.product-text p {
+  margin: 0 0 0.5rem 0;
+}
+
+.product-text {
+  text-align: center;
+}
+
+.product-text .product-price {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-top: 2rem;
+}
+
+.product {
+  position: relative;
+  width: 100%;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: #3e39393e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: backdrop-filter 0.8s, opacity 0.3s linear;
+}
+
+.product-text:hover {
+  opacity: 1;
+  backdrop-filter: blur(10px);
+}
+
+.list-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.product:nth-child(1) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.product:nth-child(6) {
+  grid-column: 2 / 5;
+  grid-row: 3 / 5;
+}
+
+.product:nth-child(10) {
+  grid-column: span 1;
+  grid-row: 5 / 6;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid var(--brown);
+  margin-top: 5rem;
+  padding-top: 3rem;
+}
+
+/* Copyright */
+
+.footer p {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.9rem;
+  font-style: italic;
+}
+
+.grid-footer {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid-footer li {
+  margin-top: 1rem;
+}
+
+.grid-footer a:hover {
+  color: var(--brown);
 }
