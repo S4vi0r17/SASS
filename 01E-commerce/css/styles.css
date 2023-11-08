@@ -323,3 +323,83 @@ img {
 .grid-footer a:hover {
   color: var(--brown);
 }
+
+/* About Us */
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 4rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shop */
+
+.list-products-shop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.product-shop {
+  background-color: var(--gray);
+}
+
+.product-text-shop {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.product-text-shop .product-price {
+  font-size: 2rem;
+}
+
+/* .lds-ring {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5rem;
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 6.4rem;
+  height: 6.4rem;
+  margin: .8rem;
+  border: .8rem solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--brown) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
