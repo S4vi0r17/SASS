@@ -1,0 +1,57 @@
+@use "../general/variables" as v;
+
+.blog-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 4rem;
+
+  .aside {
+
+    li {
+      margin: 2rem 1rem;
+
+      a {
+        text-decoration: underline;
+        text-decoration-color: v.$brown;
+        //   text-decoration-skip-ink: none;
+        text-underline-offset: 0.5rem;
+        line-height: 1.5;
+
+        &:hover {
+          color: v.$brown;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.blog-article {
+  border-bottom: 1px solid v.$brown;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      font-weight: bold;
+      color: v.$brown;
+    }
+  }
+
+  .btn-blog {
+    display: flex;
+    justify-content: end;
+
+    a {
+      margin: 0 2rem;
+    }
+  }
+}

@@ -434,7 +434,7 @@ img {
 }
 
 .hero {
-  background-image: url(../../../assets/img/hero.png);
+  background-image: url(../../assets/img/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -582,4 +582,299 @@ img {
 }
 .footer .grid-footer a:hover {
   color: #ba8449;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+  justify-items: center;
+  align-items: center;
+}
+.about-content .about-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-products-shop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.list-products-shop .product-shop {
+  background-color: #3e3939;
+}
+.list-products-shop .product-shop-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+.list-products-shop .product-shop-text .product-price {
+  font-size: 2rem;
+}
+
+/* 
+  .: Loading :.
+
+  .lds-ring {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5rem;
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 6.4rem;
+    height: 6.4rem;
+    margin: .8rem;
+    border: .8rem solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: var(--brown) transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+*/
+.blog-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+.blog-container .aside li {
+  margin: 2rem 1rem;
+}
+.blog-container .aside li a {
+  text-decoration: underline;
+  text-decoration-color: #ba8449;
+  text-underline-offset: 0.5rem;
+  line-height: 1.5;
+}
+.blog-container .aside li a:hover {
+  color: #ba8449;
+  text-decoration: none;
+}
+
+.blog-article {
+  border-bottom: 1px solid #ba8449;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+.blog-article:last-of-type {
+  border-bottom: none;
+}
+.blog-article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog-article .meta span {
+  font-weight: bold;
+  color: #ba8449;
+}
+.blog-article .btn-blog {
+  display: flex;
+  justify-content: end;
+}
+.blog-article .btn-blog a {
+  margin: 0 2rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  font-size: 1.8rem;
+  margin-top: 4rem;
+}
+.form fieldset {
+  padding: 2rem;
+  border-color: #3e3939;
+}
+.form fieldset legend {
+  font-size: 2.7rem;
+  padding: 0 1rem;
+  text-align: center;
+  color: #ba8449;
+}
+.form fieldset .personal-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.form fieldset .personal-info label {
+  display: flex;
+  flex-direction: column;
+}
+.form fieldset .personal-info label:nth-child(1) {
+  grid-column: span 2;
+}
+.form fieldset .personal-info input {
+  margin-top: 1rem;
+  padding: 1.1rem;
+}
+.form fieldset .reason-contact {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 2rem;
+}
+.form fieldset .reason-contact label {
+  display: flex;
+  flex-direction: column;
+}
+.form fieldset .reason-contact textarea {
+  margin-top: 1rem;
+  height: 6rem;
+  padding: 1rem;
+  resize: none;
+}
+.form fieldset .reason-contact #reason-input {
+  padding: 1.1rem;
+  margin-top: 1rem;
+}
+.form .contact-preferences {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.form .contact-preferences input {
+  padding: 0.7rem;
+}
+
+.terms-conditions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.terms-conditions label {
+  flex-direction: row;
+}
+.terms-conditions input {
+  display: block;
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 3px solid #ba8449;
+  border-radius: 1rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 900;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.terms-conditions input:hover {
+  background-color: #ba8449;
+}
+
+#terms {
+  margin-right: 1rem;
+}
+
+.btn {
+  color: #ffffff;
+  display: block;
+  border: 3px solid #ba8449;
+  margin: 2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* El contenedor del radio */
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.container-radio input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: -0.2rem;
+  left: 0;
+  height: 2.2rem;
+  width: 2.2rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #ba8449;
+}
+
+.terms {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.terms input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.2rem;
+  width: 2.2rem;
+  background-color: #ffffff;
+  border: 2px solid #3e3939;
+}
+
+.terms input:checked ~ .checkmark-checkbox {
+  background-color: #ba8449;
+}
+
+input,
+textarea {
+  background-color: #3e3939;
+  border: none;
+  border-radius: 0.8rem;
+  color: #ffffff;
+}
+input:focus,
+textarea:focus {
+  outline: 2px solid #ba8449;
 }

@@ -1,0 +1,193 @@
+@use "../general/variables" as v;
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  font-size: 1.8rem;
+  margin-top: 4rem;
+  fieldset {
+    padding: 2rem;
+    border-color: v.$gray;
+
+    legend {
+      font-size: 2.7rem;
+      padding: 0 1rem;
+      text-align: center;
+      color: v.$brown;
+    }
+
+    .personal-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        &:nth-child(1) {
+          grid-column: span 2;
+        }
+      }
+
+      input {
+        margin-top: 1rem;
+        padding: 1.1rem;
+      }
+    }
+    .reason-contact {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: stretch;
+      gap: 2rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+      }
+
+      textarea {
+        margin-top: 1rem;
+        height: 6rem;
+        padding: 1rem;
+        resize: none;
+      }
+
+      #reason-input {
+        padding: 1.1rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+  .contact-preferences {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    input {
+      padding: 0.7rem;
+    }
+  }
+}
+
+.terms-conditions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  label {
+    flex-direction: row;
+  }
+
+  input {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 3px solid v.$brown;
+    border-radius: 1rem;
+    color: v.$white;
+    font-size: 1.6rem;
+    font-weight: 900;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: v.$brown;
+    }
+  }
+}
+
+#terms {
+  margin-right: 1rem;
+}
+
+.btn {
+  color: v.$white;
+  display: block;
+  border: 3px solid v.$brown;
+  margin: 2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* El contenedor del radio */
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: -0.2rem;
+  left: 0;
+  height: 2.2rem;
+  width: 2.2rem;
+  background-color: v.$white;
+  border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: v.$brown;
+}
+
+.terms {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.checkmark-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.2rem;
+  width: 2.2rem;
+  background-color: v.$white;
+  border: 2px solid v.$gray;
+}
+
+.terms input:checked ~ .checkmark-checkbox {
+  background-color: v.$brown;
+}
+
+input,
+textarea {
+  background-color: v.$gray;
+  border: none;
+  border-radius: 0.8rem;
+  color: v.$white;
+
+  &:focus {
+    outline: 2px solid v.$brown;
+  }
+}
