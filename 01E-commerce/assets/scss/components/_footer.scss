@@ -1,0 +1,29 @@
+@use "../general/variables" as v;
+
+.footer {
+  border-top: 1px solid v.$brown;
+  margin-top: 5rem;
+  padding-top: 3rem;
+
+  p {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.9rem;
+    font-style: italic;
+  }
+
+  .grid-footer {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    li {
+      margin-top: 1rem;
+    }
+    
+    a:hover {
+      color: v.$brown;
+    }
+  }
+}

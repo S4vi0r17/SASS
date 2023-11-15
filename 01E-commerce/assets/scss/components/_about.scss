@@ -1,0 +1,28 @@
+@use "../general/variables" as v;
+
+.about-us {
+  background-image: 
+    linear-gradient(to right, transparent 50%, v.$brown 50%),
+    url(../../assets/img/product1.webp);
+  padding: 8rem 0;
+  background-repeat: no-repeat;
+  background-size: 100%, 120rem;
+  background-position: left center;
+  margin-top: 5rem;
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10rem;
+    text-align: center;
+    
+    .about-text {
+      grid-column: 2 / 3;
+      
+      h2,
+      p:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}

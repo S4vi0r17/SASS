@@ -1,0 +1,32 @@
+@use '../general/variables' as v;
+
+.title {
+  color: v.$white;
+  text-align: center;
+  margin: 2rem 0;
+  span {
+    color: v.$brown;
+  }
+}
+
+.navigation {
+  border-top: 1px solid v.$brown;
+  padding: 2rem;
+  font-size: 1.8rem;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a:hover {
+    color: v.$brown;
+  }
+}
+
+.hero {
+  background-image: url(../../../assets/img/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 55rem;
+}

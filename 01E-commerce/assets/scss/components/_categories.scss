@@ -1,0 +1,41 @@
+@use "../general/variables" as v;
+
+.categories {
+  h2 {
+    margin: 4rem 0;
+  }
+}
+
+.list-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  .category {
+    a {
+      display: block;
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.6rem;
+      border-radius: 0 0 1rem 1rem;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .img {
+      overflow: hidden;
+      // cursor: pointer;
+      img {
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      a {
+        background-color: v.$brown;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
