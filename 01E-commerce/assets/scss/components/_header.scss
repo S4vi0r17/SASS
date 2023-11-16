@@ -1,9 +1,11 @@
-@use '../general/variables' as v;
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
 
 .title {
   color: v.$white;
   text-align: center;
   margin: 2rem 0;
+
   span {
     color: v.$brown;
   }
@@ -11,22 +13,69 @@
 
 .navigation {
   border-top: 1px solid v.$brown;
-  padding: 2rem;
+  padding: 0;
   font-size: 1.8rem;
+
   ul {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    &.container-ul {
+      width: 100%;
+    }
   }
-  a:hover {
-    color: v.$brown;
+
+  li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  a {
+    width: 100%;
+    display: block;
+    padding: 1rem;
+
+    &:hover {
+      background-color: v.$brown;
+    }
+  }
+
+  @include m.tablet {
+    padding: 2rem;
+
+    ul {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    li {
+      display: inline;
+      width: auto;
+    }
+
+    a {
+      padding: 0;
+      
+      &:hover {
+        background-color: v.$black;
+        color: v.$brown;
+      }
+    }
   }
 }
 
 .hero {
-  background-image: url(../../assets/img/hero.png);
+  background-image: url(../../assets/img/hero.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 55rem;
+  height: 45rem;
+  
+  @include m.tablet {
+    height: 55rem;
+  }
 }

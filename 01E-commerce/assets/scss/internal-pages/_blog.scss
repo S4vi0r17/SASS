@@ -1,9 +1,13 @@
 @use "../general/variables" as v;
+@use "../general/mixins" as m;
 
 .blog-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 4rem;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+  }
 
   .aside {
 

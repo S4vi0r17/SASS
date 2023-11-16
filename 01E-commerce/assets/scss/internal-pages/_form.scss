@@ -1,14 +1,28 @@
 @use "../general/variables" as v;
+@use "../general/mixins" as m;
 
 .form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
   font-size: 1.8rem;
   margin-top: 4rem;
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
   fieldset {
+    margin-bottom: 2rem;
     padding: 2rem;
     border-color: v.$gray;
+
+    @include m.tablet {
+      margin-bottom: 3rem;
+    }
+
+    @include m.desktop {
+      margin-bottom: 0;
+    }
 
     legend {
       font-size: 2.7rem;
@@ -18,15 +32,23 @@
     }
 
     .personal-info {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
 
       label {
+        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
+
         &:nth-child(1) {
           grid-column: span 2;
+        }
+
+        @include m.tablet {
+          margin-top: 0;
         }
       }
 
@@ -35,6 +57,7 @@
         padding: 1.1rem;
       }
     }
+
     .reason-contact {
       height: 100%;
       display: flex;
@@ -78,10 +101,6 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-
-  label {
-    flex-direction: row;
-  }
 
   input {
     display: block;
@@ -148,7 +167,9 @@
 }
 
 .terms {
-  display: block;
+  display: flex;
+  justify-content: end;
+  align-items: center;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;

@@ -1,28 +1,43 @@
 @use "../general/variables" as v;
+@use "../general/mixins" as m;
 
 .about-us {
-  background-image: 
-    linear-gradient(to right, transparent 50%, v.$brown 50%),
+  background-image: linear-gradient(to bottom, transparent 50%, v.$brown 50%),
     url(../../assets/img/product1.webp);
   padding: 8rem 0;
   background-repeat: no-repeat;
-  background-size: 100%, 120rem;
-  background-position: left center;
+  background-size: 100%, 70rem;
+  background-position: center, top;
   margin-top: 5rem;
+
+  @include m.tablet {
+    background-image: linear-gradient(to right, transparent 50%, v.$brown 50%),
+      url(../../assets/img/product1.webp);
+    background-size: 100%, 120rem;
+    background-position: left center;
+  }
 
   .about-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 10rem;
-    text-align: center;
-    
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10rem;
+
     .about-text {
+      grid-row: 2 / 3;
+      text-align: center;
       grid-column: 2 / 3;
-      
+
       h2,
       p:last-of-type {
         margin: 0;
       }
+    }
+
+    @include m.tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10rem;
+      row-gap: 0;
+      grid-template-rows: unset;
     }
   }
 }

@@ -1,4 +1,5 @@
 @use "../general/variables" as v;
+@use "../general/mixins" as m;
 
 .footer {
   border-top: 1px solid v.$brown;
@@ -6,24 +7,31 @@
   padding-top: 3rem;
 
   p {
-    margin-top: 3rem;
+    margin-top: 5rem;
     text-align: center;
     font-size: 1.9rem;
     font-style: italic;
+    
+    @include m.tablet {
+      margin-top: 3rem;
+    }
   }
 
   .grid-footer {
-    text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
     gap: 2rem;
 
-    li {
-      margin-top: 1rem;
-    }
-    
-    a:hover {
-      color: v.$brown;
+    @include m.tablet {
+      grid-template-columns: repeat(3, 1fr);
+
+      li {
+        margin-top: 1rem;
+      }
+
+      a:hover {
+        color: v.$brown;
+      }
     }
   }
 }

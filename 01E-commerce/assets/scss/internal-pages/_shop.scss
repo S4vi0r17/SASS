@@ -1,9 +1,18 @@
-@use '../general/variables' as v;
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
 
 .list-products-shop {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+  grid-template-columns: 1fr;
+
+  @include m.tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include m.desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   .product-shop {
     background-color: v.$gray;
