@@ -1,0 +1,64 @@
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
+
+body {
+  font-family: v.$global-font;
+  background-color: v.$black;
+}
+
+.hero {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 18%,
+      rgba(50, 51, 54, 1) 100%
+    ),
+    url("../../assets/img/header.avif");
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+  }
+  .model {
+    color: v.$brown;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: -2rem;
+    @include m.tablet {
+      margin-bottom: 2.25rem;
+    }
+  }
+  h1 {
+    color: transparent;
+    font-size: 6rem;
+    text-align: center;
+    margin: calc(v.$separator / 2) 0;
+    animation: fluido 20s ease-in-out infinite;
+    background: linear-gradient(-45deg, #323336, #FFFFFF, #000000, #323336);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include m.tablet {
+      font-size: 6rem;
+    }
+    @keyframes fluido {
+      0% {
+        background-position: 0 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+  }
+}

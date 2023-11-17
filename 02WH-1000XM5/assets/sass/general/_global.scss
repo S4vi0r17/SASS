@@ -1,0 +1,85 @@
+@use 'variables' as v;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* ancho de la barra de desplazamiento */
+}
+
+body::-webkit-scrollbar-track {
+  background: v.$gray; /* color del área de desplazamiento */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: v.$brown; /* color del botón de desplazamiento */
+  /* border-radius: 20px;       redondez del botón de desplazamiento */
+  /* border: 3px solid orange;  relleno alrededor del botón de desplazamiento */
+}
+
+/* Global */
+
+body {
+  background-color: v.$black;
+  color: v.$white;
+  font-size: 1.6rem;
+  font-family: v.$global-font;
+}
+
+a {
+  text-decoration: none;
+  color: v.$white;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  text-align: center;
+  margin: calc(v.$separator / 2) 0;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block; /* para que no se muestre con un espacio abajo */
+}
