@@ -14,4 +14,4 @@
   <img src="img/2.png" width="auto" alt="WH-1000XM5">
 </div>
 
-**You can visit it**  [here](https://youtu.be/jEV1ejV0iaI?si=B1pWaULSZgeCKfUm).
+**You can visit it**  [here](https://wh-1000xm5-gbp.netlify.app/).
