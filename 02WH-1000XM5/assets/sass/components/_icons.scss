@@ -1,0 +1,48 @@
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
+
+.container-icons {
+  background: rgb(127, 127, 127);
+  background: linear-gradient(
+    180deg,
+    rgba(127, 127, 127, 1) 0%,
+    rgba(50, 51, 54, 1) 100%
+  );
+  padding-top: 5rem;
+  .icons {
+    @include m.tablet {
+      display: flex;
+      gap: 5rem;
+      align-items: baseline;
+    }
+    .icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      img {
+        width: 50rem;
+        height: 25rem;
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+      h3 {
+        color: v.$brown;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: -2rem;
+      }
+      p{
+        line-height: 1.4;
+      }
+      @include m.tablet {
+        &:nth-child(3) {
+          p {
+            margin-top: -0.7rem;
+          }
+        }
+      }
+    }
+  }
+}

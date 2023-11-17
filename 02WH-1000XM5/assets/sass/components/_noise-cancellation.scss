@@ -1,0 +1,58 @@
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
+
+.noise-cancellation {
+  background-image: url("../../assets/img/noise.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 25rem;
+  margin-top: 4rem;
+
+  .container-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 25rem);
+    text-align: center;
+    color: v.$white;
+    .card {
+      grid-row: 2 / 3;
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @include m.tablet {
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-card {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: unset;
+      .card {
+        justify-self: end;
+        padding: 2rem;
+        background-color: v.$white;
+        color: v.$black;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        width: 40rem;
+        height: 45rem;
+        h2 {
+          font-size: 4rem;
+          line-height: 1.4;
+          text-align: left;
+        }
+        p {
+          font-size: 1.6rem;
+          line-height: 1.2;
+          text-align: left;
+        }
+      }
+    }
+    
+  }
+}
