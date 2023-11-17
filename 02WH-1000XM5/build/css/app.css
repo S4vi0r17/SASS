@@ -313,6 +313,12 @@ template {
 @font-face {
   font-family: "Neon";
   src: url(../../../assets/fonts/MonaspaceNeon-Regular.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Neon";
+  src: url(../../../assets/fonts/MonaspaceNeon-ExtraBold.woff);
+  font-weight: 900;
 }
 html {
   box-sizing: border-box;
@@ -371,7 +377,6 @@ ul {
 h1,
 h2,
 h3 {
-  font-weight: 900;
   text-align: center;
   margin: 2.5rem 0;
 }
@@ -386,10 +391,6 @@ h2 {
 
 h3 {
   font-size: 2.8rem;
-}
-
-p {
-  font-size: 2rem;
 }
 
 img {
@@ -419,28 +420,40 @@ body {
   color: #9a7454;
   text-align: center;
   font-weight: bold;
+  font-size: 2.5rem;
   margin-bottom: -2rem;
 }
 @media (min-width: 768px) {
   .hero .model {
     margin-bottom: 2.25rem;
+    font-size: 3.5rem;
   }
 }
-.hero h1 {
+.hero .title {
   color: transparent;
   font-size: 6rem;
+  font-weight: 800;
   text-align: center;
   margin: 2.5rem 0;
   animation: fluido 20s ease-in-out infinite;
-  background: linear-gradient(-45deg, #323336, #FFFFFF, #000000, #323336);
+  background: linear-gradient(-45deg, #323336, #ffffff, #000000, #323336);
+  background: linear-gradient(180deg, #fff, #e1dfdf);
   background-size: 300%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media (min-width: 768px) {
-  .hero h1 {
-    font-size: 6rem;
+  .hero .title {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero .title {
+    font-size: 10rem;
+  }
+  .hero .title p {
+    font-size: 20rem;
   }
 }
 @keyframes fluido {

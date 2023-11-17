@@ -23,6 +23,13 @@ $separator: 5rem;
 @font-face {
     font-family: 'Neon';
     src: url(../../../assets/fonts/MonaspaceNeon-Regular.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Neon';
+    src: url(../../../assets/fonts/MonaspaceNeon-ExtraBold.woff);
+    font-weight: 900;
 }
 
 $global-font: "Neon";
