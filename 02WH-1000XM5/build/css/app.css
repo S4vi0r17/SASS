@@ -311,13 +311,13 @@ template {
 }
 
 @font-face {
-  font-family: "Neon";
-  src: url(../../../assets/fonts/MonaspaceNeon-Regular.woff);
+  font-family: "Geist";
+  src: url(../../../assets/fonts//GeistMono-Regular.otf), url(../../../assets/fonts/GeistMono-Regular.woff2);
   font-weight: 400;
 }
 @font-face {
-  font-family: "Neon";
-  src: url(../../../assets/fonts/MonaspaceNeon-ExtraBold.woff);
+  font-family: "Geist";
+  src: url(../../../assets/fonts/GeistMono-UltraBlack.woff2);
   font-weight: 900;
 }
 html {
@@ -351,7 +351,7 @@ body {
   background-color: #323336;
   color: #e9e9e9;
   font-size: 1.6rem;
-  font-family: "Neon";
+  font-family: "Geist";
 }
 
 a {
@@ -400,7 +400,7 @@ img {
 }
 
 body {
-  font-family: "Neon";
+  font-family: "Geist";
   background-color: #323336;
 }
 
@@ -414,15 +414,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-.hero p {
-  text-align: center;
-}
 .hero .model {
   color: #9a7454;
   text-align: center;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 2.5rem;
-  margin-bottom: -2rem;
+  margin-bottom: -0.3rem;
 }
 @media (min-width: 768px) {
   .hero .model {
@@ -433,7 +430,7 @@ body {
 .hero .title {
   color: transparent;
   font-size: 6rem;
-  font-weight: 800;
+  font-weight: 900;
   text-align: center;
   margin: calc(var(--separator) / 2) 0;
   background: linear-gradient(180deg, #fff, #323336);
@@ -444,15 +441,22 @@ body {
 }
 @media (min-width: 768px) {
   .hero .title {
-    font-size: 8rem;
+    font-size: 10rem;
   }
 }
 @media (min-width: 1024px) {
   .hero .title {
-    font-size: 10rem;
+    font-size: 14rem;
   }
-  .hero .title p {
-    font-size: 20rem;
+}
+.hero p {
+  color: #e9e9e9;
+  font-size: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .hero p {
+    font-size: 2rem;
   }
 }
 @keyframes animateBackground {
@@ -507,7 +511,7 @@ body {
 .noise-cancellation {
   background-image: url("../../assets/img/noise.avif");
   background-size: cover;
-  background-position: center;
+  background-position: 30% center;
   background-repeat: no-repeat;
   height: 25rem;
   margin-top: 4rem;
@@ -527,6 +531,7 @@ body {
 }
 @media (min-width: 768px) {
   .noise-cancellation {
+    background-position: center;
     height: 60rem;
     display: flex;
     justify-content: center;
@@ -556,6 +561,77 @@ body {
     line-height: 1.2;
     text-align: left;
   }
+}
+
+.features {
+  margin-top: 20rem;
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .features {
+    margin-top: 0;
+  }
+}
+.features .features__list {
+  display: flex;
+  flex-direction: column;
+  color: #323336;
+}
+@media (min-width: 1024px) {
+  .features .features__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+.features .features__list .headphones-connect {
+  width: 100%;
+  background-color: #e9e9e9;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0px 0px 10px 0px rgb(230, 173, 125);
+}
+.features .features__list .headphones-connect:hover {
+  transform: scale(1.05);
+}
+.features .features__list .headphones-connect:nth-last-child(2) {
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+.features .features__list .headphones-connect img {
+  width: 15rem;
+  height: 15rem;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+.features .features__list .headphones-connect:hover img {
+  transform: scale(1.2);
+}
+@media (min-width: 1024px) {
+  .features .features__list .headphones-connect {
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .features .features__list .headphones-connect:nth-child(2) img {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+.features .features__list .headphones-connect h3 {
+  margin: 0;
+  font-size: 2rem;
+  width: 15rem;
+}
+.features .features__list .headphones-connect:last-of-type {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -4,7 +4,7 @@
 .noise-cancellation {
   background-image: url("../../assets/img/noise.avif");
   background-size: cover;
-  background-position: center;
+  background-position: 30% center;
   background-repeat: no-repeat;
   height: 25rem;
   margin-top: 4rem;
@@ -24,6 +24,7 @@
   }
 
   @include m.tablet {
+    background-position: center;
     height: 60rem;
     display: flex;
     justify-content: center;

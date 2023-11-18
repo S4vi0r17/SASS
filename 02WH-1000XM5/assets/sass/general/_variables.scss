@@ -5,8 +5,6 @@ $black: #323336;
 $gray: #818182;
 $white: #e9e9e9;
 
-
-
 // Media Queries: Phone, Tablet, Desktop
 
 $phone: 480px;
@@ -21,15 +19,16 @@ $separator: 5rem;
 // Fonts
 
 @font-face {
-    font-family: 'Neon';
-    src: url(../../../assets/fonts/MonaspaceNeon-Regular.woff);
-    font-weight: 400;
+  font-family: "Geist";
+  src: url(../../../assets/fonts//GeistMono-Regular.otf),
+    url(../../../assets/fonts/GeistMono-Regular.woff2);
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Neon';
-    src: url(../../../assets/fonts/MonaspaceNeon-ExtraBold.woff);
-    font-weight: 900;
+  font-family: "Geist";
+  src: url(../../../assets/fonts/GeistMono-UltraBlack.woff2);
+  font-weight: 900;
 }
 
-$global-font: "Neon";
+$global-font: "Geist";
