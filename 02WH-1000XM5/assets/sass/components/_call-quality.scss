@@ -1,0 +1,63 @@
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
+
+.call-quality {
+  background-image: linear-gradient(to bottom, transparent 50%, v.$brown 0%),
+    url(../../assets/img/call.avif);
+  background-position: 39%;
+  background-repeat: repeat, no-repeat; // repeat, no-repeat
+
+  @include m.tablet {
+    background-image: linear-gradient(to left, transparent 50%, v.$brown 0%),
+      url(../../assets/img/call.avif);
+    background-position: right 20%;
+  }
+
+  // @include m.desktopXL {
+  //   background-size: 100%, 150rem;
+  // }
+
+  &-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 35rem); // 40 rem
+    row-gap: 5rem;
+
+    @include m.tablet {
+      grid-template-rows: unset;
+      row-gap: unset;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 5rem;
+      padding: calc(v.$separator * 1) 0;
+    }
+  }
+
+  &-text {
+    grid-row: 2 / 3;
+    padding-bottom: v.$separator / 2;
+
+    @include m.tablet {
+      padding-bottom: 0;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    @include m.tablet {
+
+      p {
+        font-size: 2rem;
+        line-height: 2;
+      }
+
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+}
