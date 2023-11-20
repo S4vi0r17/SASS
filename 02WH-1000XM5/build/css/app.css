@@ -334,6 +334,7 @@ html {
 
 body::-webkit-scrollbar {
   width: 12px; /* ancho de la barra de desplazamiento */
+  display: none;
 }
 
 body::-webkit-scrollbar-track {
@@ -594,8 +595,8 @@ body {
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
-  transition: transform 0.2s ease-in-out;
   box-shadow: 0px 0px 10px 0px rgb(230, 173, 125);
+  transition: transform 0.1s linear;
 }
 .features .features__list .headphones-connect:hover {
   transform: scale(1.05);

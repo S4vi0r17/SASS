@@ -14,6 +14,7 @@ html {
 
 body::-webkit-scrollbar {
   width: 12px; /* ancho de la barra de desplazamiento */
+  display: none;
 }
 
 body::-webkit-scrollbar-track {
