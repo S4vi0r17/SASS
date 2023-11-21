@@ -34,25 +34,6 @@ body {
       font-size: 3.5rem;
     }
   }
-  .title {
-    color: transparent;
-    font-size: 6rem;
-    font-weight: 900;
-    text-align: center;
-    margin: calc(var(--separator) / 2) 0;
-    background: linear-gradient(180deg, #fff, #323336);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animateBackground 1s linear infinite alternate; /* Animación */
-
-    @include m.tablet {
-      font-size: 10rem;
-    }
-    @include m.desktop {
-      font-size: 14rem;
-    }
-  }
   p{
     color: v.$white;
     font-size: 1.5rem;
@@ -65,5 +46,25 @@ body {
   @keyframes animateBackground {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
+  }
+}
+
+.title {
+  color: transparent;
+  font-size: 6rem;
+  font-weight: 900;
+  text-align: center;
+  margin: calc(var(--separator) / 2) 0;
+  background: linear-gradient(180deg, #fff, #323336);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateBackground 1s linear infinite alternate; /* Animación */
+
+  @include m.tablet {
+    font-size: 10rem;
+  }
+  @include m.desktop {
+    font-size: 14rem;
   }
 }

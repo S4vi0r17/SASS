@@ -1,0 +1,40 @@
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
+
+.add-to-cart {
+  background-image: linear-gradient(to bottom, transparent 50%, v.$white 0%),
+    url(../../assets/img/form.avif);
+  background-repeat: no-repeat;
+  background-position: 50% -112%;
+
+  &__grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2, 40rem);
+    row-gap: v.$separator;
+  }
+  &__content {
+    grid-row: 2 / 3;
+    color: v.$black;
+  }
+
+  @include m.tablet {
+    background-image: linear-gradient(to right, transparent 50%, v.$white 0%),
+      url(../../assets/img/form.avif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -6%;
+    &__grid {
+      height: 50rem;
+      justify-content: center;
+      grid-template-rows: unset;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: v.$separator;
+      row-gap: 0;
+    }
+    &__content {
+      grid-column: 2 / 3;
+      color: v.$black;
+    }
+  }
+}
