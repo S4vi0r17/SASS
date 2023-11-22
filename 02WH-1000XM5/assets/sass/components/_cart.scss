@@ -6,15 +6,20 @@
     url(../../assets/img/form.avif);
   // background-size: auto auto;
   background-repeat: no-repeat;
-  background-position: center, center -65%;
+  background-position: center, center -250%;
   color: v.$black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 88rem;
 
   @include m.desktop {
     background-image: linear-gradient(to right, transparent 50%, v.$white 0%),
       url(../../assets/img/form.avif);
-      background-size: 100% auto;
-      background-position: center, -28rem center;
-      height: 50rem;
+    background-size: cover;
+    background-position: center, -28rem center;
+    height: 50rem;
   }
 
   @include m.desktopXL {
@@ -22,18 +27,52 @@
   }
 
   &__grid {
+
+    height: 100%;
     display: grid;
-    grid-template-rows: repeat(2, 50rem);
+    grid-template-rows: 50rem 1fr;
+    align-content: center;
+    justify-content: center;
+    gap: v.$separator;
+
     .add-to-cart__content {
+      height: auto;
+      text-align: center;
       grid-row: 2 / 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+
     }
+
+    .form {
+
+      input {
+        border: none;
+        background-color: v.$brown;
+        color: v.$white;
+        padding: 2rem v.$separator/2;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten($color: v.$brown, $amount: 5);
+          transform: scale(1.1);
+        }
+      }
+    }
+
     @include m.desktop {
+      row-gap: 0;
+      column-gap: v.$separator;
       grid-template-rows: unset;
       grid-template-columns: repeat(2, 1fr);
+
       .add-to-cart__content {
         grid-column: 2 / 3;
       }
-      
     }
   }
 }
