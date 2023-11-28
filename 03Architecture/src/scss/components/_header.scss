@@ -1,0 +1,129 @@
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
+
+.header {
+  min-height: 60rem;
+  background-image: url(../../src/img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  padding: 5rem 0;
+
+  &__container {
+    height: calc(60rem - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: v.$white;
+
+    .navbar {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @include m.tablet {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .header__nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+      width: 100%;
+
+      @include m.tablet {
+        align-items: flex-end;
+        width: auto;
+      }
+    }
+
+    .slogan {
+      margin: 0 auto;
+      text-align: center;
+
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+        line-height-step: 1;
+      }
+
+      @include m.tablet {
+        margin-right: 0;
+        margin-left: auto;
+        text-align: right;
+
+        h1 {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 300;
+    text-align: center;
+    font-size: 3rem;
+
+    span {
+      font-weight: 900;
+    }
+
+    @include m.tablet {
+      font-size: 5rem;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    gap: 1.5rem;
+
+    &::before {
+      // before siempre es un elemento inline
+      content: "";
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      background-image: url(../../src/img/phone.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include m.tablet {
+      width: auto;
+    }
+
+    a {
+      display: block;
+      padding: 1rem 2rem;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: rgb(255 255 255 / 20%);
+        border-radius: 1.6rem;
+      }
+    }
+
+    @include m.tablet {
+      flex-direction: row;
+    }
+  }
+}
