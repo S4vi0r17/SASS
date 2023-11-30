@@ -1,0 +1,28 @@
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
+
+.about {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  background-image: url("../../src/img/about-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  @include m.laptop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__content {
+    background-color: v.$white;
+    padding: 5rem;
+
+    h2,
+    p {
+      margin-bottom: 1rem;
+    }
+
+    @include m.laptop {
+      grid-column: 2 / 4;
+    }
+  }
+}
