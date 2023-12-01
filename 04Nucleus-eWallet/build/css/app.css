@@ -365,7 +365,7 @@ img {
   max-width: 100%;
 }
 
-.container {
+[class$=__container] {
   max-width: 120rem;
   width: 90%;
   margin: 0 auto;
@@ -419,11 +419,6 @@ img {
     display: flex;
     justify-content: space-between;
   }
-}
-.header__container {
-  max-width: 120rem;
-  margin: 0 auto;
-  width: 90%;
 }
 .header__logo {
   width: 15rem;
@@ -488,6 +483,51 @@ img {
   .navigation__link {
     color: #ffffff;
   }
+}
+
+.nucleus {
+  margin-top: 3rem;
+}
+.nucleus__heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.nucleus__grid {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .nucleus__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5rem;
+    align-items: center;
+  }
+}
+
+.list {
+  user-select: none;
+}
+.list__item {
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  margin-bottom: 5rem;
+  transition: transform 0.2s ease-in-out;
+}
+.list__item:last-child {
+  margin-bottom: 0;
+}
+.list__item:hover {
+  transform: scale(1.05);
+}
+.list__heading {
+  font-size: 3rem;
+  color: #6834a6;
+  margin: 0;
+}
+.list__text {
+  margin: 0;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=app.css.map */
