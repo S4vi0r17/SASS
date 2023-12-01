@@ -1,2 +1,106 @@
 @use "../general/variables" as v;
 @use "../general/mixins" as m;
+
+.header {
+    background-image: url("../../src/img/header_bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 10rem;
+    padding: 5rem 0;
+
+    @include m.tablet {
+        background-size: 50rem;
+    }
+
+    @include m.laptop {
+        background-size: 60rem;
+    }
+
+    @include m.desktop {
+        background-size: 100rem;
+    }
+
+    &__bar {
+
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__container {
+        max-width: 120rem;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    &__logo {
+        width: 15rem;
+        margin: 0 auto 3rem auto;
+
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+
+    &__grid {
+        
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            align-items: center;
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 3rem;
+
+        @include m.tablet {
+            text-align: left;
+            font-size: 5rem;
+            line-height: 1.2;
+        }
+    }
+
+    &__image {
+
+        @include m.tablet {
+            max-width: 30rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__button {
+        background-color: v.$primary;
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        color: v.$white;
+        margin-bottom: 4rem;
+
+        @include m.tablet {
+            padding: 1rem 3rem;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.tablet {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+
+        &__link {
+            color: v.$white;
+        }
+    }
+}
