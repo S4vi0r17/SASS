@@ -23,3 +23,11 @@
 </div>
 
 **You can visit it** [here](https://architecture-gbp.netlify.app/).
+
+## 04 - Nucleus - eWallet
+
+<div align="center">
+  <img src="img/4.png" width="auto" alt="Nucleus - eWallet">
+</div>
+
+**You can visit it** [here](https://nucleus-gbp.netlify.app/).
