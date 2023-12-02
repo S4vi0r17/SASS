@@ -1,0 +1,44 @@
+@use "../general/variables" as v;
+@use "../general/mixins" as m;
+
+.security{
+    background-color: v.$primary;
+    padding: 20rem 0;
+    margin: 10rem 0;
+    position: relative;
+    overflow: hidden;
+
+    &::after, &::before{
+        content: '';
+        background-color: v.$white;
+        position: absolute;
+        height: 20rem;
+        width: 120%;
+    }
+
+    &::before{
+        top: -10rem;
+        left: 0;
+        transform: rotate(3deg);
+    }
+
+    &::after{
+        bottom: -10rem;
+        left: 0;
+        transform: rotate(-3deg);
+    }
+    
+    &__heading{
+        color: v.$white;
+    }
+
+    &__grid{
+
+        @include m.tablet{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5rem;
+            align-items: center;
+        }
+    }
+}

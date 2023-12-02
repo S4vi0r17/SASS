@@ -21,7 +21,6 @@
     }
 
     &__bar {
-
         @include m.tablet {
             display: flex;
             justify-content: space-between;
@@ -38,7 +37,6 @@
     }
 
     &__grid {
-        
         @include m.tablet {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -48,7 +46,6 @@
     }
 
     &__heading {
-        text-align: center;
         font-size: 3rem;
 
         @include m.tablet {
@@ -59,7 +56,6 @@
     }
 
     &__image {
-
         @include m.tablet {
             max-width: 30rem;
             margin: 0 auto;
@@ -80,8 +76,6 @@
         }
     }
 }
-
-
 
 .navigation {
     display: flex;

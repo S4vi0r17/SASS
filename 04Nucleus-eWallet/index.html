@@ -1,80 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nucleus - eWallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nucleus - eWallet </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./build/css/app.css" />
+  </head>
 
-    <link rel="stylesheet" href="./build/css/app.css">
-</head>
-
-<body>
-
+  <body>
     <header class="header">
-        <div class="header__container">
-            <div class="header__bar">
-                <div class="header__logo">
-                    <img src="./src/img/logo.svg" alt="logo">
-                </div>
+      <div class="header__container">
+        <div class="header__bar">
+          <div class="header__logo">
+            <img src="./src/img/logo.svg" alt="logo" />
+          </div>
 
-                <nav class="navigation">
-                    <a href="#" class="navigation__link">What is it?</a>
-                    <a href="#" class="navigation__link">How it Works?</a>
-                    <a href="#" class="navigation__link">Prices</a>
-                    <a href="#" class="navigation__link">Hire</a>
-                </nav>
-            </div>
-            <div class="header__grid">
-
-                <div class="header__text">
-                    <h1 class="header__heading">Receive and make payments on your phone with nucleus</h1>
-                    <a class="header__button" href="#">Get Account</a>
-                </div>
-
-                <div class="header__graphic">
-                    <img class="header__image" src="./src/img/app_1.svg" alt="nucleus app image">
-                </div>
-
-            </div>
+          <nav class="navigation">
+            <a href="#" class="navigation__link">What is it?</a>
+            <a href="#" class="navigation__link">How it Works?</a>
+            <a href="#" class="navigation__link">Prices</a>
+            <a href="#" class="navigation__link">Hire</a>
+          </nav>
         </div>
+        <div class="header__grid">
+          <div class="header__text">
+            <h1 class="header__heading">
+              Receive and make payments on your phone with nucleus
+            </h1>
+            <a class="header__button" href="#">Get Account</a>
+          </div>
+
+          <div class="header__graphic">
+            <img
+              class="header__image"
+              src="./src/img/app_1.svg"
+              alt="nucleus app image"
+            />
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="nucleus">
-        <h2 class="nucleus__heading">What is it?</h2>
-        <div class="nucleus__container">
-            <div class="nucleus__grid">
+      <h2 class="nucleus__heading">What is it?</h2>
+      <div class="nucleus__container">
+        <div class="nucleus__grid">
+          <div class="nucleus__image">
+            <img src="./src/img/app_2.svg" alt="nucleus app" />
+          </div>
 
-                <div class="nucleus__image">
-                    <img src="./src/img/app_2.svg" alt="nucleus app">
-                </div>
-
-                <div class="list">
-                    <div class="list__item">
-                        <h2 class="list__heading">Easy</h2>
-                        <p class="list__text">Create an account, submit your documentation, and start using nucleus in a
-                            couple of hours</p>
-                    </div>
-
-                    <div class="list__item">
-                        <h2 class="list__heading">Secure</h2>
-                        <p class="list__text">Due to its digital technology, nucleus is impossible to hack or steal</p>
-                    </div>
-
-                    <div class="list__item">
-                        <h2 class="list__heading">Manageable</h2>
-                        <p class="list__text">Add or transfer funds to your bank, set limits, or control your expenses
-                        </p>
-                    </div>
-                </div>
+          <div class="list">
+            <div class="list__item">
+              <h2 class="list__heading">Easy</h2>
+              <p class="list__text">
+                Create an account, submit your documentation, and start using
+                nucleus in a couple of hours
+              </p>
             </div>
+
+            <div class="list__item">
+              <h2 class="list__heading">Secure</h2>
+              <p class="list__text">
+                Due to its digital technology, nucleus is impossible to hack or
+                steal
+              </p>
+            </div>
+
+            <div class="list__item">
+              <h2 class="list__heading">Manageable</h2>
+              <p class="list__text">
+                Add or transfer funds to your bank, set limits, or control your
+                expenses
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
 
-</body>
+    <section class="security">
+      <div class="security__container">
+        <h2 class="security__heading">Nucleus is secure</h2>
+        <div class="security__grid">
+          <div class="list">
+            <div class="list__item">
+              <p class="list__text">
+                Nucleus is secure and impossible to clone
+              </p>
+            </div>
 
+            <div class="list__item">
+              <p class="list__text">
+                Use your face or your fingerprint to confirm a deposit or
+                register an account
+              </p>
+            </div>
+
+            <div class="list__item">
+              <p class="list__text">
+                Pay at an establishment with a credit card that deactivates once
+                you've made your purchase
+              </p>
+            </div>
+          </div>
+
+          <div class="security__image">
+            <img src="./src/img/security.png" alt="nucleus security" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

@@ -26,6 +26,7 @@
     user-select: none;
 
     &__item {
+        background-color: v.$white;
         box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .15);
         padding: 2rem;
         margin-bottom: 5rem;

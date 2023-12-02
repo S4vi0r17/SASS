@@ -372,6 +372,12 @@ img {
   margin-inline: auto;
 }
 
+[class$=__heading] {
+  max-width: 120rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
 .btn {
   color: #111111;
   background-color: #ffffff;
@@ -438,7 +444,6 @@ img {
   }
 }
 .header__heading {
-  text-align: center;
   font-size: 3rem;
 }
 @media (min-width: 768px) {
@@ -509,6 +514,7 @@ img {
   user-select: none;
 }
 .list__item {
+  background-color: #ffffff;
   box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.15);
   padding: 2rem;
   margin-bottom: 5rem;
@@ -528,6 +534,42 @@ img {
 .list__text {
   margin: 0;
   font-size: 2rem;
+}
+
+.security {
+  background-color: #6834a6;
+  padding: 20rem 0;
+  margin: 10rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.security::after, .security::before {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  height: 20rem;
+  width: 120%;
+}
+.security::before {
+  top: -10rem;
+  left: 0;
+  transform: rotate(3deg);
+}
+.security::after {
+  bottom: -10rem;
+  left: 0;
+  transform: rotate(-3deg);
+}
+.security__heading {
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .security__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
