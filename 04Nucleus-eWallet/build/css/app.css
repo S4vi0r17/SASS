@@ -489,6 +489,9 @@ img {
     color: #ffffff;
   }
 }
+.navigation__link--white {
+  color: #ffffff;
+}
 
 .nucleus {
   margin-top: 3rem;
@@ -615,6 +618,71 @@ img {
 @media (min-width: 768px) {
   .commissions__text {
     text-align: left;
+  }
+}
+
+.testimonials {
+  background-color: #6834a6;
+  padding: 5rem 0;
+}
+.testimonials__heading {
+  color: #ffffff;
+}
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+@media (min-width: 768px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.testimonials .testimonial {
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  padding: 2rem;
+  position: relative;
+}
+.testimonials .testimonial__text {
+  padding-left: 4rem;
+}
+.testimonials .testimonial__text::before {
+  content: "";
+  background-image: url("../../src/img/quote.png");
+  background-size: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 4rem;
+}
+.testimonials .testimonial__author {
+  color: #6834a6;
+  font-weight: 700;
+  text-align: right;
+}
+
+.footer {
+  background-color: #5c2e93;
+  padding: 3rem 0;
+}
+@media (min-width: 768px) {
+  .footer__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer__logo {
+  width: 20rem;
+  margin: 0 auto 4rem auto;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    margin: 0;
   }
 }
 

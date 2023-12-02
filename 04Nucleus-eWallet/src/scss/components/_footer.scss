@@ -1,2 +1,25 @@
 @use "../general/variables" as v;
 @use "../general/mixins" as m;
+
+.footer {
+    background-color: darken($color: v.$primary, $amount: 5);
+    padding: 3rem 0;
+
+    &__grid {
+
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        width: 20rem;
+        margin: 0 auto 4rem auto;
+
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+}
