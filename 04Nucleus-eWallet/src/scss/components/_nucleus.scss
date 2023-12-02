@@ -39,6 +39,34 @@
         &:hover {
             transform: scale(1.05);
         }
+
+        // commissions section
+
+        &--2col {
+
+            @include m.tablet {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2rem;
+            }
+        }
+    }
+
+    // commissions section
+
+    &__number {
+        font-size: 6rem;
+        margin: 0;
+        font-weight: 900;
+        color: v.$primary;
+        text-align: center;
+
+        @include m.tablet {
+            flex-basis: 20rem;
+            text-align: right;
+            font-size: 4rem;
+        }
     }
 
     &__heading {
