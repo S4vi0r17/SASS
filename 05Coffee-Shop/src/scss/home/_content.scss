@@ -1,0 +1,17 @@
+@use '../general/variables' as v;
+@use '../general/mixins' as m;
+
+.main-content{
+    background-color: v.$white;
+    padding: 5rem 2rem;
+
+    @include m.tablet {
+        position: relative; // Para que se muestre un poco en el header
+        padding: 5rem;
+        margin-top: -10rem;
+    }
+
+    .know-more{
+
+    }
+}
