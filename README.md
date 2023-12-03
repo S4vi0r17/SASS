@@ -24,10 +24,18 @@
 
 **You can visit it** [here](https://architecture-gbp.netlify.app/).
 
-## 04 - Nucleus - eWallet
+## 04 - Nucleus-eWallet
 
 <div align="center">
-  <img src="img/4.png" width="auto" alt="Nucleus - eWallet">
+  <img src="img/4.png" width="auto" alt="Nucleus eWallet">
 </div>
 
 **You can visit it** [here](https://nucleus-gbp.netlify.app/).
+
+## 05 - Coffee-Shop
+
+<div align="center">
+  <img src="img/5.png" width="auto" alt="Coffee Shop">
+</div>
+
+**You can visit it** [here](https://coffee-shop-gbp.netlify.app/).
