@@ -1,4 +1,5 @@
 const { src, dest, watch, series, parallel } = require("gulp");
+const plumber = require("gulp-plumber"); // Para que no se detenga el proceso cuando hay un error
 
 // CSS y SASS
 const sass = require("gulp-sass")(require("sass"));
@@ -17,8 +18,9 @@ function css(done) {
     // Pasos: Encontrar el archivo sass, 2- Compilarlo, 3- Guardarlo en una carpeta
 
     src("src/scss/app.scss")
+        .pipe(plumber()) // Para que no se detenga el proceso cuando hay un error
         .pipe(sass()) // nested, expanded, compact, compressed {outputStyle: 'compressed'}
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([autoprefixer()])) // los prefijos son para que el css sea compatible con todos los navegadores
         .pipe(dest("build/css"));
 
     done();
