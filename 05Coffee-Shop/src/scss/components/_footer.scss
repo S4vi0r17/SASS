@@ -1,3 +1,47 @@
 @use "../general/variables" as v;
 @use "../general/mixins" as m;
 
+.footer {
+    background-color: v.$primary;
+
+    &__content {
+        padding: 5rem;
+
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &__box {
+        font-family: v.$cursive-font;
+        text-align: center;
+        margin-bottom: v.$separator;
+
+        @include m.tablet {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-family: v.$cursive-font;
+            color: v.$secondary;
+            margin: 0 0 1rem 0;
+            font-size: 2.4rem;
+        }
+
+        p,
+        a {
+            font-size: 2rem;
+            color: v.$black;
+            margin: 0;
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        margin: 0;
+        color: v.$white;
+        padding: 1.5rem;
+        font-family: v.$cursive-font;
+        font-size: 2rem;
+    }
+}
