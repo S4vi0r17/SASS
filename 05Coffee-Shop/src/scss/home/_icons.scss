@@ -1,0 +1,26 @@
+@use '../general/variables' as v;
+@use '../general/mixins' as m;
+
+.icons{
+    margin-top: 5rem;
+
+    &__list{
+
+        @include m.tablet{
+            @include m.grid(3, 2rem);
+        }
+
+        li{
+            img{
+                margin: 0 auto;
+                width: 12rem;
+            }
+
+            p{
+                font-family: v.$cursive-font;
+                font-size: 3.2rem;
+                color: v.$primary;
+            }
+        }
+    }
+}

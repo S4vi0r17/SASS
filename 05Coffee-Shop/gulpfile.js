@@ -20,7 +20,7 @@ function css(done) {
     src("src/scss/app.scss")
         .pipe(plumber()) // Para que no se detenga el proceso cuando hay un error
         .pipe(sass()) // nested, expanded, compact, compressed {outputStyle: 'compressed'}
-        .pipe(postcss([autoprefixer()])) // los prefijos son para que el css sea compatible con todos los navegadores
+        .pipe(postcss([autoprefixer()])) // los prefijos son para que el css sea compatible con todos los navegadores, es necesario configurarlo en package.json
         .pipe(dest("build/css"));
 
     done();
