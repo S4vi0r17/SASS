@@ -1,7 +1,7 @@
 @use "../general/variables" as v;
 @use "../general/mixins" as m;
 
-.header{
+.header {
     padding: 5rem 0;
     position: relative;
     background-repeat: no-repeat;
@@ -11,7 +11,7 @@
         min-height: 70rem;
     }
 
-    &::before{
+    &::before {
         content: '';
         position: absolute;
         background-color: v.$black;
@@ -22,31 +22,35 @@
         opacity: .6;
     }
 
-    &--home{
+    &--home {
         background-image: url("../img/header_inicio.jpg");
     }
 
-    &--about{
+    &--about {
         background-image: url("../img/header_nosotros.jpg");
     }
 
-    &--process{
+    &--process {
         background-image: url("../img/header_proceso.jpg");
     }
 
-    &--menu{
+    &--menu {
         background-image: url("../img/header_menu.jpg");
     }
 
-    &--gallery{
+    &--gallery {
         background-image: url("../img/header_galeria.jpg");
     }
 
-    &__content{
+    &--contact {
+        background-image: url("../img/header_contacto.jpg");
+    }
+
+    &__content {
         position: relative;
     }
 
-    &__text h1{
+    &__text h1 {
         margin-top: 5rem;
         text-align: center;
         text-transform: uppercase;

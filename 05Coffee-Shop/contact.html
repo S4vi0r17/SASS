@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
   <body>
-    <header class="header header--home">
+    <header class="header header--contact">
       <div class="header__content container">
         <div class="navbar">
           <div class="navbar__logo">
@@ -30,12 +30,50 @@
         </div>
 
         <div class="header__text">
-          <h1>Enjoy a delicious cup of coffee</h1>
+          <h1>Finest beans, finest coffee</h1>
         </div>
       </div>
     </header>
 
-    <main class="container main-content"></main>
+    <main class="container main-content">
+      <h2><span>Reserve your</span>Table</h2>
+      <div class="contact-content">
+        <form class="form">
+          <div class="form__field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" />
+          </div>
+          <div class="form__field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" />
+          </div>
+          <div class="form__field">
+            <label for="guests">Number of People:</label>
+            <select id="guests">
+              <option value="" disabled selected>-- Select --</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="more">+4</option>
+            </select>
+          </div>
+
+          <div class="form__field">
+            <label for="time">Time:</label>
+            <input type="time" id="time" min="09:00" max="18:00" />
+          </div>
+
+          <div class="form__field">
+            <label for="date">Date:</label>
+            <input type="date" id="date" />
+          </div>
+          <div class="form__field">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </main>
 
     <footer class="footer">
       <div class="container footer__content bg-white">

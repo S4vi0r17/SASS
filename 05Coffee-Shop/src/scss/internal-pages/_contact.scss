@@ -1,0 +1,94 @@
+@use '../general/variables' as v;
+@use '../general/mixins' as m;
+
+.contact-content {
+
+    @include m.tablet {
+        @include m.grid(2, v.$separator);
+        background-image: url(../img/granos_cafe.jpg);
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 40%;
+    }
+}
+
+.form {
+
+    &__field {
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            text-transform: uppercase;
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: v.$black;
+        }
+
+        input {
+            color: darken($color: v.$light-gray, $amount: 10);
+
+            &[type="submit"] {
+                background-color: v.$secondary;
+                width: 100%;
+                border: none;
+                padding: 1rem;
+                color: v.$white;
+                font-size: 2.2rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: darken($color: v.$secondary, $amount: 5);
+                }
+            }
+
+            &:not([type="submit"]) {
+                margin-top: 1rem;
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: 1rem;
+                font-size: 2.2rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                border-bottom: 2px solid v.$light-gray;
+                background-color: transparent;
+                text-transform: lowercase;
+
+                &:focus {
+                    border-bottom: 2px solid v.$secondary;
+                }
+
+                // Placeholder
+                &::-webkit-input-placeholder {
+                    color: darken($color: v.$light-gray, $amount: 10)
+                }
+            }
+        }
+
+        select {
+            margin-top: 1rem;
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 1rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 2px solid v.$light-gray;
+            background-color: transparent;
+            text-transform: lowercase;
+            color: darken($color: v.$light-gray, $amount: 10);
+
+            &:focus {
+                border-bottom: 2px solid v.$secondary;
+            }
+        }
+    }
+}
