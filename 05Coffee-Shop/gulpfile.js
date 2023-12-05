@@ -6,6 +6,12 @@ const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 
+// sourcemaps
+const sourcemaps = require("gulp-sourcemaps");
+
+// Para minificar el css
+const cssnano = require("cssnano");
+
 // Imagenes
 // npm install --save-dev gulp-imagemin@7.1.0
 const imagemin = require("gulp-imagemin");
@@ -19,8 +25,10 @@ function css(done) {
 
     src("src/scss/app.scss")
         .pipe(plumber()) // Para que no se detenga el proceso cuando hay un error
+        .pipe(sourcemaps.init()) // Inicializar sourcemaps
         .pipe(sass()) // nested, expanded, compact, compressed {outputStyle: 'compressed'}
-        .pipe(postcss([autoprefixer()])) // los prefijos son para que el css sea compatible con todos los navegadores, es necesario configurarlo en package.json
+        .pipe(postcss([autoprefixer(), cssnano()])) // los prefijos son para que el css sea compatible con todos los navegadores, es necesario configurarlo en package.json
+        .pipe(sourcemaps.write(".")) // Escribir los sourcemaps
         .pipe(dest("build/css"));
 
     done();
