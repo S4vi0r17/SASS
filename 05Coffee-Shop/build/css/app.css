@@ -407,6 +407,7 @@ ul {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
   /* para que no se muestre con un espacio abajo */
 }
@@ -430,6 +431,8 @@ img {
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .header {
@@ -448,6 +451,9 @@ img {
 }
 .header--home {
   background-image: url("../img/header_inicio.jpg");
+}
+.header--about {
+  background-image: url("../img/header_nosotros.jpg");
 }
 .header__content {
   position: relative;
@@ -752,4 +758,33 @@ img {
   font-size: 2.4rem;
   color: #5E311E;
   font-family: "Bona Nova", serif;
+}
+
+@media (min-width: 768px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+}
+.about__image {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .about__image {
+    margin: 0 2rem 0 0;
+  }
+}
+.about__image img {
+  transform: rotate(-6deg);
+  border: 3rem solid #ffffff;
+  box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.35);
+}
+.about__text blockquote {
+  margin: 0;
+  padding: 1rem;
+  color: #5E311E;
+  border-left: 0.5rem solid #5E311E;
+  font-size: 2rem;
 }
