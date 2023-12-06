@@ -39,3 +39,11 @@
 </div>
 
 **You can visit it** [here](https://coffee-shop-gbp.netlify.app/).
+
+## 06 - DeliveryApp
+
+<div align="center">
+  <img src="img/6.png" width="auto" alt="Delivery App">
+</div>
+
+**You can visit it** [here](https://deliveryapp-gbp.netlify.app/).
