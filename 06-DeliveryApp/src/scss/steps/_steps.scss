@@ -1,0 +1,48 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.steps {
+    margin-top: 5rem;
+
+    &__content {
+        background-color: v.$primary;
+        margin-top: -1px; // to hide the border
+    }
+
+    &__heading {
+        text-align: center;
+        color: v.$white;
+
+        &--description {
+            font-size: 1.8rem;
+            display: block;
+        }
+    }
+
+    &__grid {
+
+        @include m.tablet {
+            @include m.grid(3, v.$separator);
+        }
+    }
+
+    &__step {
+
+        .steps__image {
+            transition: transform 0.2s ease-in-out;
+            transform: scale(1);
+        }
+
+        &:nth-child(1):hover .steps__image {
+            transform: rotate(-4deg) scale(1.1);
+        }
+
+        &:nth-child(2):hover .steps__image {
+            transform: scale(1.1);
+        }
+
+        &:nth-child(3):hover .steps__image {
+            transform: rotate(4deg) scale(1.1);
+        }
+    }
+}

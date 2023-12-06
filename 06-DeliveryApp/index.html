@@ -27,5 +27,77 @@
         >
       </nav>
     </header>
+
+    <section class="container form">
+      <div class="form__grid">
+        <div class="form__content">
+          <h2 class="form__heading">
+            Find and Order food from your favorite restaurant
+          </h2>
+          <form class="form__search">
+            <div class="form__field">
+              <label for="restaurant" class="form__label">Restaurant</label>
+              <input
+                id="restaurant"
+                class="form__input"
+                placeholder="Cevicheria El Boliviano"
+              />
+            </div>
+            <div class="form__field">
+              <label for="dish" class="form__label">Dish</label>
+              <input
+                id="dish"
+                class="form__input"
+                placeholder="Ceviche, Pizza, Salad..."
+              />
+            </div>
+            <input type="submit" class="form__submit" value="Search" />
+          </form>
+        </div>
+        <div class="form__image-container">
+          <img
+            class="form__image"
+            src="build/img/dibujo_repartidor.svg"
+            alt="delivery person image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="steps">
+      <img class="steps__wave" src="build/img/wave.svg" alt="wave image" />
+
+      <div class="steps__content">
+        <h2 class="steps__heading">
+          How does it work?
+          <span class="steps__heading--description"
+            >as easy as 1, 2, and 3</span
+          >
+        </h2>
+        <div class="steps__grid container">
+          <div class="steps__step">
+            <img
+              class="steps__image"
+              src="build/img/paso_1.png"
+              alt="app step image"
+            />
+          </div>
+          <div class="steps__step">
+            <img
+              class="steps__image"
+              src="build/img/paso_2.png"
+              alt="app step image"
+            />
+          </div>
+          <div class="steps__step">
+            <img
+              class="steps__image"
+              src="build/img/paso_3.png"
+              alt="app step image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
