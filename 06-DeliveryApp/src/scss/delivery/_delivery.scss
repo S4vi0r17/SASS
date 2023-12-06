@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.delivery-persons {
+    padding: v.$separator 0;
+
+    &__heading {
+        text-align: center;
+        color: v.$secondary;
+    }
+
+    &__grid {
+
+        @include m.tablet {
+            @include m.grid(2, v.$separator);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+
+        @include m.tablet {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        line-height: 1.5;
+        color: v.$secondary;
+    }
+
+    &__button {
+        @include m.button(v.$primary, v.$white);
+    }
+}
