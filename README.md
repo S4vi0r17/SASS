@@ -47,3 +47,11 @@
 </div>
 
 **You can visit it** [here](https://deliveryapp-gbp.netlify.app/).
+
+## 07 - PodcastApp
+
+<div align="center">
+  <img src="img/7.png" width="auto" alt="Podcast App">
+</div>
+
+**You can visit it** [here](https://podcastapp-gbp.netlify.app/).
