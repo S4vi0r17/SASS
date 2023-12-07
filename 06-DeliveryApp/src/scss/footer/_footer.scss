@@ -18,10 +18,14 @@
     }
 
     &__nav {
-        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    &__text,
+    &__nav {
+        margin-top: 2rem;
     }
 
     &__link {
@@ -38,7 +42,7 @@
         margin-bottom: 3rem;
 
         @include m.tablet {
-            margin-bottom: 0;
+            margin-bottom: 2.5rem;
         }
     }
 
