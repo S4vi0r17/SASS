@@ -25,10 +25,13 @@
     &__title {
         color: v.$white;
         font-size: 4.5rem;
+        text-align: center;
+        margin-bottom: 2.5rem;
 
         @include m.tablet {
             font-size: 6rem;
             max-width: 50%;
+            text-align: left;
         }
 
         // @include m.desktop {
