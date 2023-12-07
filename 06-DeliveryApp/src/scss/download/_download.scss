@@ -1,0 +1,61 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.download {
+    background-color: v.$ligh-gray;
+    padding: v.$separator 0;
+
+    &__grid {
+
+        @include m.tablet {
+            @include m.grid(2, v.$separator);
+        }
+    }
+
+    &__image {
+        width: 50%;
+        margin: 0 auto;
+        transition: transform .2s ease-in-out;
+
+        &:hover {
+            transform: rotate(4deg) scale(1.1);
+        }
+    }
+}
+
+.stores {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include m.tablet {
+        margin-top: 0;
+    }
+
+    &__heading,
+    &__text {
+        text-align: center;
+    }
+
+    &__heading {
+        color: v.$secondary;
+        margin: 2rem 0 0 0;
+    }
+
+    &__text {
+        margin-bottom: 3rem;
+    }
+
+    &__grid {
+        @include m.grid(2, 2rem);
+    }
+
+    &__link {
+        transition: transform .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
