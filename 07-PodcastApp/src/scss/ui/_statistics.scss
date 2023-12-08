@@ -1,0 +1,10 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.statistics {
+
+    &__title {
+        @include m.borderTitle(v.$secondary, v.$primary);
+        margin: 0 auto; // TO-DO centrar
+    }
+}

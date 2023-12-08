@@ -58,3 +58,11 @@ ul {
     padding: 0;
     list-style: none;
 }
+
+.section {
+    padding: 3rem 0;
+
+    @include m.tablet {
+        padding: 8rem 0;
+    }
+}

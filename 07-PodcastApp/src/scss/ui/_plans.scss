@@ -1,0 +1,90 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.plans {
+    background-color: v.$secondary;
+
+    &__title {
+        @include m.borderTitle(v.$white, v.$primary);
+    }
+
+    &__description {
+        color: v.$white;
+    }
+}
+
+.our-plans {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include m.tablet {
+        flex-direction: row;
+        gap: 0;
+        max-width: 80rem;
+        // margin: 10rem auto 0 auto;
+        margin-inline: auto;
+        margin-block-start: 10rem;
+    }
+
+    .plan {
+        background-color: v.$white;
+        flex-grow: 1;
+        padding: 16rem 4rem 4rem 4rem;
+        border-radius: 2rem;
+
+        @include m.tablet {
+            border-radius: unset;
+            transition: transform .3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 0px 10px 0px rgba(63, 63, 63, 0.75);
+            }
+        }
+
+        &.start {
+            @include m.bgIcon('../img/icono_inicio.svg')
+        }
+
+        &.business {
+            order: -1;
+            z-index: 5; // Para evitar que se encime
+            background-color: v.$primary;
+            @include m.bgIcon('../img/icono_negocio.svg');
+
+            @include m.tablet {
+                order: 0; // reset order or order: unset;
+                // margin-top: -5rem;
+                // margin-bottom: -5rem;
+                margin-block: -5rem;
+                border-radius: 2rem;
+                // background-position: 50% 7rem; // Para alinear los iconos
+                // padding-top: calc(16rem + 5rem); // Para alinear el texto
+            }
+        }
+
+        &.pro {
+            @include m.bgIcon('../img/icono_pro.svg');
+        }
+
+        &__price {
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        &__list {
+
+            li {
+                text-align: center;
+                margin-bottom: 2rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
