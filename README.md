@@ -55,3 +55,11 @@
 </div>
 
 **You can visit it** [here](https://podcastapp-gbp.netlify.app/).
+
+## 08 - TravelX
+
+<div align="center">
+  <img src="img/8.png" width="auto" alt="TravelX">
+</div>
+
+**You can visit it** [here](https://podcastapp-gbp.netlify.app/).
