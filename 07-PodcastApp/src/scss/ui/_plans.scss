@@ -35,11 +35,11 @@
 
         @include m.tablet {
             border-radius: unset;
-            transition: transform .3s ease;
+            transition: transform .3s ease, box-shadow .2s ease;
 
             &:hover {
                 transform: scale(1.05);
-                box-shadow: 0px 0px 10px 0px rgba(63, 63, 63, 0.75);
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
             }
         }
 
