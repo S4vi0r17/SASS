@@ -62,4 +62,4 @@
   <img src="img/8.png" width="auto" alt="TravelX">
 </div>
 
-**You can visit it** [here](https://podcastapp-gbp.netlify.app/).
+**You can visit it** [here](https://travelx-gbp.netlify.app/).
