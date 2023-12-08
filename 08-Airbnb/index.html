@@ -13,5 +13,66 @@
     />
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="bar container">
+        <div class="bar__logo">
+          <p class="bar__title">TravelX</>
+        </div>
+
+        <nav class="bar__navigation">
+          <a href="#" class="bar__link">Places to Stay</a>
+          <a href="#" class="bar__link">Experiences</a>
+          <a href="#" class="bar__link">Online Experiences</a>
+        </nav>
+
+        <div class="bar__user">
+          <a href="#" class="bar__link">Become a Host</a>
+        </div>
+      </div>
+
+      <form class="form container">
+        <div class="form__group">
+          <label for="location" class="form__label"
+            >Location</label
+          >
+          <input
+            type="text"
+            id="location"
+            class="form__input"
+            placeholder="Enter your destination"
+          />
+        </div>
+
+        <div class="form__group">
+          <label for="arrival" class="form__label">Arrival</label>
+          <input type="date" id="arrival" class="form__input" />
+        </div>
+
+        <div class="form__group">
+          <label for="departure" class="form__label">Departure</label>
+          <input type="date" id="departure" class="form__input" />
+        </div>
+
+        <div class="form__group">
+          <label for="guests" class="form__label">Guests</label>
+          <input
+            type="number"
+            id="guests"
+            class="form__input"
+            placeholder="How many?"
+          />
+        </div>
+
+        <div class="form__group">
+          <input type="submit" class="form__submit" value="Search" />
+        </div>
+      </form>
+
+      <div class="header__search container">
+        <p class="header__search-text">Not sure where to go?</p>
+        <a href="#" class="header__search-button">Flexible Search</a>
+      </div>
+    </header>
+  </body>
 </html>

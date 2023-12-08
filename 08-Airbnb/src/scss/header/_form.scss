@@ -1,0 +1,67 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.form {
+    margin: 5rem auto 2rem auto;
+    background-color: v.$white;
+    border-radius: 3rem;
+    box-shadow: 0px 3px 7px 0 v.$gray;
+    padding: 3rem 0;
+
+    @include m.desktop {
+        display: flex;
+        justify-content: space-between;
+        max-width: 90rem;
+        padding: 0;
+    }
+
+    &__group {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 3rem;
+        transition: box-shadow 0.3s ease-in-out;
+
+        &:nth-child(1) {
+            @include m.tablet {
+                padding-left: 4rem;
+            }
+        }
+
+        // Interesante este selector
+        &:not(:last-child):hover {
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    &__input {
+        border: none;
+        width: 100%;
+        color: v.$gray;
+        text-align: center;
+    }
+
+    &__submit {
+        display: block;
+        height: 4rem;
+        border: none;
+        border-radius: 2rem;
+        background: v.$secondary;
+        padding: 0 2rem;
+        color: v.$white;
+        font-weight: 700;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background 0.3s linear;
+
+        &:hover {
+            background: lighten($color: v.$secondary, $amount: 10%);
+        }
+    }
+}
