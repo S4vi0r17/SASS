@@ -1,0 +1,74 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.testimonials {
+
+    &__title {
+        @include m.borderTitle(v.$secondary, v.$primary);
+    }
+
+    @include m.tablet {
+        align-items: center;
+        @include m.grid(5, 4rem);
+
+        &__image {
+            grid-column: span 2;
+        }
+
+        &__content {
+            grid-column: span 3;
+        }
+    }
+
+    &__content {
+
+        .testimonial {
+            background-color: v.$primary;
+            border: .5rem solid v.$secondary;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            position: relative;
+
+            @include m.tablet {
+                max-width: 70%;
+
+                // &:nth-child(1){ bug con SASS
+                //     margin-left: 10rem;
+                // }
+
+                &:nth-child(2) {
+                    margin-left: 10%;
+                }
+
+                &:nth-child(3) {
+                    margin-left: 20%;
+                }
+
+                &:nth-child(4) {
+                    margin-left: 30%;
+                }
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                width: 5rem;
+                height: 5rem;
+                background-image: url(../img/comilla.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &__text {
+                margin: 0;
+                padding-left: 6rem;
+            }
+        }
+    }
+}
