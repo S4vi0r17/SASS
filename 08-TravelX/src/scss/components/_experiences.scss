@@ -1,32 +1,33 @@
 @use 'general/variables' as v;
 @use 'general/mixins' as m;
 
-.places {
+.experiences {
 
-    &__grid {
+    &__list {
         display: grid;
-        grid-template-columns: repeat(4, 70vw);
-        column-gap: 4rem;
-        
+        grid-template-columns: repeat(3, 70vw);
+        column-gap: 2rem;
+
         @include m.horizontalScrolling;
 
         @include m.tablet {
-            @include m.grid(2, 2rem);
-        }
-
-        @include m.desktop {
-            @include m.grid(4, 2rem);
+            @include m.grid(3, 2rem);
         }
     }
 }
 
-.place {
+.experience {
 
     &__image {
         border-radius: 1rem;
     }
 
-    &_name {
+    &__title {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    &__description {
         font-size: 1.8rem;
     }
 }

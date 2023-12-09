@@ -40,3 +40,17 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
+
+@mixin horizontalScrolling {
+    overflow-y: hidden; // hide the scrollbar
+    overflow-x: scroll; // enable horizontal scrolling
+    scroll-snap-type: x mandatory; // snap to the grid
+
+    >* {
+        scroll-snap-align: center; // center the items
+    }
+
+    @include tablet {
+        overflow-x: auto;
+    }
+}
