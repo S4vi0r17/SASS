@@ -55,11 +55,15 @@
     grid-template-columns: repeat($columnas, 1fr);
 }
 
-@mixin heading {
+@mixin heading($br: false) {
     font-weight: 400;
 
     span {
         font-weight: 700;
+
+        @if($br ==true) { // $br es el salto
+            display: block; // Para que haya un salto de línea
+        }
     }
 
     &::after {
