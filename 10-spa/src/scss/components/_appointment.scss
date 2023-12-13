@@ -1,0 +1,29 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.appointment {
+    background-image: url(../img/bg_citas.webp);
+    background-position: center center;
+    background-size: cover;
+    padding: 5rem 0;
+    text-align: center; // Para que el botón se centre
+    background-attachment: fixed; // Efecto parallax
+
+    &__heading {
+        @include m.heading;
+        color: v.$white;
+        font-size: 6rem;
+    }
+
+    &__text {
+        max-width: 60rem;
+        margin: 0 auto;
+        color: v.$white;
+        line-height: 2;
+    }
+
+    &__link {
+        @include m.button(v.$primary, v.$white);
+        padding: 2rem 10rem;
+    }
+}

@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
   <body>
@@ -53,18 +57,33 @@
       </div>
     </div>
 
-    <section class="slider">
-      <ul class="slider__container">
-        <li class="slider__slide">
-          <img src="build/img/slide_01.webp" alt="slider 1" />
+    <section class="swiper mySwiper container">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+          <img
+            class="slider__image"
+            src="build/img/slide_01.webp"
+            alt="slider 1"
+          />
         </li>
-        <li class="slider__slide">
-          <img src="build/img/slide_02.webp" alt="slider 2" />
+        <li class="swiper-slide">
+          <img
+            class="slider__image"
+            src="build/img/slide_02.webp"
+            alt="slider 2"
+          />
         </li>
-        <li class="slider__slide">
-          <img src="build/img/slide_03.webp" alt="slider 3" />
+        <li class="swiper-slide">
+          <img
+            class="slider__image"
+            src="build/img/slide_03.webp"
+            alt="slider 3"
+          />
         </li>
       </ul>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </section>
     <section class="welcome section">
       <h1 class="welcome__heading">Welcome to our <span>website</span></h1>
@@ -175,5 +194,133 @@
         </div>
       </div>
     </section>
+    <main class="products container section">
+      <h2 class="products__heading">Our <span>Products</span></h2>
+
+      <div class="products__grid">
+        <div class="product">
+          <div class="product__mask">
+            <img
+              class="product__image"
+              src="build/img/producto_01.webp"
+              alt="product image"
+            />
+          </div>
+          <div class="product__content">
+            <h3 class="product__heading">Product 1</h3>
+            <p class="product__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatum.
+            </p>
+            <p class="product__price">$25.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__mask">
+            <img
+              class="product__image"
+              src="build/img/producto_02.webp"
+              alt="product image"
+            />
+          </div>
+          <div class="product__content">
+            <h3 class="product__heading">Product 2</h3>
+            <p class="product__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatum.
+            </p>
+            <p class="product__price">$25.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__mask">
+            <img
+              class="product__image"
+              src="build/img/producto_03.webp"
+              alt="product image"
+            />
+          </div>
+          <div class="product__content">
+            <h3 class="product__heading">Product 3</h3>
+            <p class="product__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatum.
+            </p>
+            <p class="product__price">$25.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__mask">
+            <img
+              class="product__image"
+              src="build/img/producto_04.webp"
+              alt="product image"
+            />
+          </div>
+          <div class="product__content">
+            <h3 class="product__heading">Product 4</h3>
+            <p class="product__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatum.
+            </p>
+            <p class="product__price">$25.00</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="appointment">
+      <h2 class="appointment__heading">Make an Appointment</h2>
+      <p class="appointment__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+        assumenda blanditiis maiores ipsa earum inventore veritatis. Dolore, aut
+        esse alias labore modi unde reiciendis obcaecati libero necessitatibus,
+        numquam, voluptatum non.
+      </p>
+      <a class="appointment__link" href="#">Read more</a>
+    </section>
+    <footer class="footer">
+      <div class="footer__grid container">
+        <div class="footer__widget">
+          <h3 class="footer__heading">About Us</h3>
+          <p class="footer__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            cum, minus atque harum maxime reprehenderit fugiat sed corrupti
+            inventore tempora quisquam provident aut facere ipsum pariatur, esse
+            velit blanditiis quae!
+          </p>
+        </div>
+        <div class="footer__widget">
+          <h3 class="footer__heading">Opening Hours</h3>
+          <p class="footer__text">Mon-Fri: 9AM - 7PM</p>
+          <p class="footer__text">Sat: 9AM - 2PM</p>
+          <p class="footer__text">Sun: Closed</p>
+        </div>
+        <div class="footer__widget">
+          <h3 class="footer__heading">Contact</h3>
+          <p class="footer__text">1818 Revolución Avenue</p>
+
+          <nav class="socials">
+            <a class="socials__link" href="https://facebook.com">
+              <span class="socials__accessible">Facebook</span>
+            </a>
+            <a class="socials__link" href="https://twitter.com">
+              <span class="socials__accessible">Twitter</span>
+            </a>
+            <a class="socials__link" href="https://instagram.com">
+              <span class="socials__accessible">Instagram</span>
+            </a>
+            <a class="socials__link" href="https://youtube.com">
+              <span class="socials__accessible">YouTube</span>
+            </a>
+            <a class="socials__link" href="https://tiktok.com">
+              <span class="socials__accessible">TikTok</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <p class="footer__copyright">Eder Benites</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/js/app.js"></script>
   </body>
 </html>

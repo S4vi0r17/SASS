@@ -1,0 +1,62 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.products {
+
+    &__heading {
+        @include m.cursiveHeading;
+        margin-bottom: 5rem;
+    }
+
+    &__grid {
+        @include m.grid(1, 2rem); // Para evitar el last-of-type
+
+        @include m.tablet {
+            @include m.grid(2, 2rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(4, 2rem);
+        }
+    }
+}
+
+.product {
+
+    &__mask {
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        transition: transform .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__content {
+        background-color: v.$white;
+        padding: 2rem;
+    }
+
+    &__heading {
+        @include m.heading;
+        font-size: 2.4rem;
+        color: v.$secondary;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        line-height: 1.8;
+    }
+
+    &__price {
+        text-align: center;
+        color: v.$gray;
+        font-size: 2.8rem;
+        margin: 0;
+    }
+}

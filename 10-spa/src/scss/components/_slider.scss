@@ -1,0 +1,42 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.swiper {
+    width: 100%;
+    height: 100%;
+
+    &-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-button-prev,
+    &-button-next {
+        color: v.$white;
+
+        &:hover {
+            color: v.$secondary;
+        }
+    }
+
+    &-pagination-bullet {
+        background-color: v.$white;
+        opacity: 0.5;
+
+        &-active {
+            background-color: v.$secondary;
+            opacity: 1;
+        }
+    }
+}
