@@ -1,0 +1,71 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.schedule {
+    background-image: linear-gradient(to bottom, v.$primary 0%, v.$primary 50%, transparent 50%), url(../img/bg_horarios.jpg);
+    background-repeat: no-repeat;
+    background-position: center, bottom center;
+    color: v.$white;
+
+    @include m.tablet {
+        background-image: linear-gradient(to right, v.$primary 0%, v.$primary 50%, transparent 50%), url(../img/bg_horarios.jpg);
+        background-position: center, top right;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+
+        @include m.tablet {
+            grid-template-rows: unset;
+            @include m.grid(2, 5rem)
+        }
+    }
+
+    &__content {
+        padding: 5rem 0;
+    }
+
+    &__heading {
+        @include m.heading;
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        line-height: 1.8;
+        text-align: center;
+    }
+}
+
+.table {
+    width: 100%;
+    border: .5rem solid v.$secondary;
+    text-align: center;
+    border-collapse: collapse; // Para que no se vean los bordes de las celdas
+
+    &__thead {
+        background-color: v.$secondary;
+        padding: 2rem; // No funciona, debe ir en el th
+    }
+
+    &__th {
+        color: v.$white;
+        font-size: 2.2rem;
+        padding: 2rem;
+    }
+
+    &__tr {
+        border: .3rem solid v.$secondary;
+        user-select: none;
+        transition: background-color .3s ease-in-out;
+
+        &:hover {
+            background-color: v.$secondary;
+        }
+    }
+
+    &__td {
+        padding: 1rem;
+        font-size: 2.2rem;
+    }
+}

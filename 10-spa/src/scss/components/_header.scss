@@ -2,7 +2,8 @@
 @use 'general/mixins' as m;
 
 .header {
-    padding-top: 5rem;
+    // padding-top: 5rem;
+    padding-top: 3rem;
 
     &__grid {
         display: flex;
@@ -13,6 +14,13 @@
         @include m.tablet {
             flex-direction: row;
             justify-content: space-between;
+        }
+    }
+
+    &__logo {
+
+        img {
+            width: 100%;
         }
     }
 }
@@ -46,9 +54,15 @@
         color: v.$white;
         margin-bottom: 1.2rem;
         font-size: 2.2rem;
+        transition: color .2s ease-in-out, transform .2s ease-in-out;
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &:hover {
+            color: v.$secondary;
+            transform: scale(1.1);
         }
 
         @include m.tablet {
