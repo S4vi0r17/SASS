@@ -71,3 +71,11 @@
 </div>
 
 **You can visit it** [here](https://real-estate-gbp.netlify.app/).
+
+## 10 - Spa
+
+<div align="center">
+  <img src="img/10.png" width="auto" alt="Spa">
+</div>
+
+**You can visit it** [here](https://spa-gbp.netlify.app/).
