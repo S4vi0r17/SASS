@@ -2,9 +2,9 @@
 @use 'mixins' as m;
 
 .btn {
-    @include m.boton(v.$white, v.$black);
+    @include m.button(v.$white, v.$black);
 }
 
 .btn-black {
-    @include m.boton(v.$black, v.$white);
+    @include m.button(v.$black, v.$white);
 }

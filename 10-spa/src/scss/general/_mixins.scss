@@ -20,7 +20,7 @@
 }
 
 
-@mixin boton($bgColor, $colorTexto) {
+@mixin button($bgColor, $colorTexto) {
     background-color: $bgColor;
     padding: 2rem 2rem;
     color: $colorTexto;
@@ -47,4 +47,21 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin cursiveHeading {
+    text-align: center;
+    color: v.$secondary;
+    font-family: v.$cursive-font;
+    line-height: .8;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 4rem;
+
+    span {
+        color: v.$black;
+        display: block;
+        text-transform: uppercase;
+        font-family: v.$main-font;
+    }
 }
