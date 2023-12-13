@@ -1,0 +1,131 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.header {
+    padding-top: 5rem;
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+.navigation {
+    background-color: v.$primary;
+    padding: .5rem 0;
+    margin: 2rem 0;
+
+    &__border {
+        border-top: 2px dashed v.$white;
+        padding: 1.5rem 0;
+        border-bottom: 2px dashed v.$white;
+        border-block: 2px dashed v.$white;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__link {
+        color: v.$white;
+        margin-bottom: 1.2rem;
+        font-size: 2.2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+}
+
+.socials {
+    margin: 5rem 0;
+    display: flex;
+    gap: 1rem;
+
+    @include m.tablet {
+        margin: 0;
+    }
+
+    &__link {
+
+        &::before {
+            content: '';
+            padding: 2rem;
+            display: inline-block;
+        }
+
+        /*
+            * : en cualquier parte
+            ^ : al inicio
+            $ : al final
+        */
+
+        &[href*="facebook.com"] {
+            &::before {
+                background-image: url('../img/icono_facebook.svg');
+            }
+        }
+
+        &[href*="twitter.com"] {
+            &::before {
+                background-image: url('../img/icono_twitter.svg');
+            }
+        }
+
+        &[href*="instagram.com"] {
+            &::before {
+                background-image: url('../img/icono_instagram.svg');
+            }
+        }
+
+        &[href*="pinterest.com"] {
+            &::before {
+                background-image: url('../img/icono_pinterest.svg');
+            }
+        }
+
+        &[href*="youtube.com"] {
+            &::before {
+                background-image: url('../img/icono_youtube.svg');
+            }
+        }
+
+        &[href*="tiktok.com"] {
+            &::before {
+                background-image: url('../img/icono_tiktok.svg');
+            }
+        }
+    }
+
+    &__accessible {
+        // display: none; // El aparato no lo detecta
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0); // clip: rect : recortar
+        border: 0;
+        display: block;
+    }
+}
