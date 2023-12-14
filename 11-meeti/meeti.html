@@ -1,14 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meeti</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Staatliches" rel="stylesheet">
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Staatliches"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <div class="header__logo">
+        <a href="/">
+          <img src="build/img/logo.webp" alt="logo meeti" />
+        </a>
+      </div>
+      <nav class="nav">
+        <a class="nav__link nav__link--active" href="#">Create Group</a>
+        <a class="nav__link" href="#">Log In</a>
+        <a class="nav__link" href="#">Sign Up</a>
+      </nav>
+    </header>
 
-</body>
+    <main class="meeti container">
+      <h1 class="meeti__heading">Headless WordPress with Next.js</h1>
+
+      <div class="meeti__grid">
+        <section class="meeti__info">
+          <img
+            class="meeti__image"
+            srcset="build/img/meeti.webp"
+            alt="meeti image"
+          />
+
+          <p class="meeti__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam
+            fugit repellendus est minima? Facilis eum sequi quaerat enim debitis
+            quidem cupiditate, minus similique commodi officiis eveniet
+            distinctio eligendi. Vitae.
+          </p>
+
+          <p class="meeti__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam
+            fugit repellendus est minima? Facilis eum sequi quaerat enim debitis
+            quidem cupiditate, minus similique commodi officiis eveniet
+            distinctio eligendi. Vitae.
+          </p>
+        </section>
+
+        <aside class="sidebar">
+          <img class="sidebar__map" src="build/img/mapa.webp" alt="map image" />
+
+          <div class="sidebar__content">
+            <h3 class="sidebar__heading">Meeti Information</h3>
+
+            <p class="sidebar__text">
+              <span class="sidebar__label">Date:</span>
+              December 30, 2022
+            </p>
+
+            <p class="sidebar__text">
+              <span class="sidebar__label">Time:</span>
+              20:30
+            </p>
+
+            <p class="sidebar__text">
+              <span class="sidebar__label">Location:</span>
+              Av. Vallarta 3033
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer container">
+      <nav class="nav">
+        <a class="nav__link nav__link--active" href="#">Create Group</a>
+        <a class="nav__link" href="#">Log In</a>
+        <a class="nav__link" href="#">Sign Up</a>
+      </nav>
+
+      <p class="footer__copyright">Eder Benites</p>
+    </footer>
+  </body>
 </html>

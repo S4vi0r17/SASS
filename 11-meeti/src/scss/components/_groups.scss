@@ -1,0 +1,30 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.groups {
+    background: linear-gradient(to bottom, v.$primary 0%, v.$primary 50%, v.$secondary 50%, v.$secondary 100%);
+    color: v.$white;
+    padding: 5rem 0;
+
+    @include m.tablet {
+        background: linear-gradient(to right, v.$primary 0%, v.$primary 50%, v.$secondary 50%, v.$secondary 100%);
+    }
+
+    &__grid {
+        @include m.grid(1, 5rem);
+
+        @include m.tablet {
+            @include m.grid(2, 5rem);
+        }
+    }
+
+    &__heading {
+        font-size: 3rem;
+    }
+
+    &__text {
+        color: v.$white;
+        font-size: 2.4rem;
+        line-height: 2;
+    }
+}

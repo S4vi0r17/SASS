@@ -17,8 +17,8 @@
 .nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; // optional
+    justify-content: center; // optional
 
     @include m.tablet {
         flex-direction: row;
@@ -49,7 +49,7 @@
             color: v.$primary;
 
             @include m.tablet {
-                
+
                 &::after {
                     content: '';
                     display: inline-block;

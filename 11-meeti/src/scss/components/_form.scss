@@ -6,9 +6,7 @@
     padding: 5rem 0;
 
     &__heading {
-        text-align: center;
-        color: v.$gray;
-        margin: 0;
+        @include m.heading;
     }
 }
 
