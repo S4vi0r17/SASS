@@ -1,0 +1,26 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.hero {
+    min-height: 60rem;
+    background-image: url(../img/hero.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: v.$white;
+
+    &__text {
+        max-width: 60rem;
+    }
+
+    &__link {
+        @include m.button(v.$tertiary, v.$white);
+    }
+}

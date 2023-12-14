@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeti</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Staatliches"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <div class="header__logo">
+        <a href="/">
+          <img src="build/img/logo.webp" alt="logo meeti" />
+        </a>
+      </div>
+      <nav class="nav">
+        <a class="nav__link nav__link--active" href="#">Create Group</a>
+        <a class="nav__link" href="#">Log In</a>
+        <a class="nav__link" href="#">Sign Up</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <h1 class="hero__text">
+        Find or Create a group to share what you love the most
+      </h1>
+      <a class="hero__link" href="#">Get an account</a>
+    </section>
+    <section class="search">
+      <h2 class="search__heading">Find a group in your city</h2>
+
+      <div class="container">
+        <form class="form">
+          <select class="form__field">
+            <option>Programming</option>
+            <option>Design</option>
+            <option>Business</option>
+            <option>Fashion</option>
+            <option>Exercise and Health</option>
+            <option>Photography</option>
+            <option>Food</option>
+            <option>Interior Design</option>
+            <option>Coffee</option>
+            <option>Cinema</option>
+            <option>Books</option>
+            <option>Entrepreneurship</option>
+          </select>
+
+          <input class="form__field" type="text" placeholder="Event Name" />
+          <input
+            class="form__field"
+            type="text"
+            placeholder="City or Country"
+          />
+          <input class="form__submit" type="submit" value="Search" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

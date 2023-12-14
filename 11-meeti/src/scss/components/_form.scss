@@ -1,0 +1,39 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.search {
+    background-color: v.$lightGray;
+    padding: 5rem 0;
+
+    &__heading {
+        text-align: center;
+        color: v.$gray;
+        margin: 0;
+    }
+}
+
+.form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include m.tablet {
+        @include m.grid(4, 3rem);
+    }
+
+    &__field {
+        padding: 1rem;
+        border: .1rem solid lighten($color: v.$gray, $amount: 50%);
+        margin-bottom: 2rem;
+
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+
+    &__submit {
+        @include m.button(v.$primary, v.$white);
+        margin-top: 0; // El mixin tiene un margin-top de 2rem
+    }
+}
