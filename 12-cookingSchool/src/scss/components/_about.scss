@@ -1,0 +1,25 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.about {
+    padding: 5rem 0;
+
+    &__heading {
+        @include m.heading;
+    }
+
+    &__grid {
+
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &__block {
+        text-align: center;
+    }
+
+    &__image {
+        margin: 0 auto;
+    }
+}

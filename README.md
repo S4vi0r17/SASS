@@ -87,3 +87,11 @@
 </div>
 
 **You can visit it** [here](https://meeti-gbp.netlify.app/).
+
+## 12 - Cooking School
+
+<div align="center">
+  <img src="img/12.png" width="auto" alt="Cooking School">
+</div>
+
+**You can visit it** [here](https://cooking-school-gbp.netlify.app/).
