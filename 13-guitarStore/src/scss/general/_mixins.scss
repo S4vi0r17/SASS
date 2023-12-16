@@ -1,0 +1,99 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+@mixin phone {
+    @media (min-width: v.$phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopxl) {
+        @content;
+    }
+}
+
+
+@mixin button($bgColor, $colorTexto) {
+    background-color: $bgColor;
+    padding: 1.5rem 4rem;
+    color: $colorTexto;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+
+    @include tablet {
+        width: auto;
+    }
+
+    &:hover {
+        background-color: darken($bgColor, 10%);
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin bgImage($nombreImg, $position) {
+    background-image: url('../img/#{$nombreImg}.webp');
+    background-size: cover;
+    background-position: $position;
+    background-repeat: no-repeat;
+}
+
+// @mixin bgImage($nombreImg, $options: ()) {
+//     $default-options: (
+//         size: cover,
+//         position: center,
+//         repeat: no-repeat
+//     );
+
+// $options: map-merge($default-options, $options);
+
+// $image-url: '../img/#{$nombreImg}.webp';
+// background-image: url($image-url);
+// background-size: map-get($options, size);
+// background-position: map-get($options, position);
+// background-repeat: map-get($options, repeat);
+// }
+
+// .element {
+//     @include bgImage('nombre-de-imagen', (size: contain,
+//             position: top left,
+//             repeat: repeat));
+// }
+
+@mixin heading {
+    text-align: center;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 10rem;
+        margin: 0 auto;
+        background-image: url('../img/separador.webp');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}

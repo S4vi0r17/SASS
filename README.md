@@ -95,3 +95,11 @@
 </div>
 
 **You can visit it** [here](https://cooking-school-gbp.netlify.app/).
+
+## 13 - Guitar Store
+
+<div align="center">
+  <img src="img/12.png" width="auto" alt="Guitar Store">
+</div>
+
+**You can visit it** [here](https://cooking-school-gbp.netlify.app/).
