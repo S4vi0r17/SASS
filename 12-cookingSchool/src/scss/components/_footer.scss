@@ -1,0 +1,27 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.footer {
+    padding: 3rem 0;
+    border-bottom: .5rem solid v.$primary;
+
+    &__grid {
+
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__copyright {
+        margin-top: 4rem;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 2.4rem;
+
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+}
