@@ -1,2 +1,115 @@
 @use 'general/variables' as v;
 @use 'general/mixins' as m;
+
+.header {
+    background-image: linear-gradient(to right, rgb(0 0 0 / .7), rgb(0 0 0 / .7)), url(../img/header.webp);
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+
+    &__bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        width: 30rem;
+    }
+
+    position: relative;
+
+    &__guitar {
+        display: none;
+
+        @include m.desktop {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            animation: showImage 1.5s ease-in-out;
+        }
+    }
+}
+
+@keyframes showImage {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem;
+    // Para la guitarra
+    position: relative;
+    z-index: 1;
+
+    @include m.tablet {
+        margin-top: 0;
+    }
+
+    &__link {
+        color: v.$white;
+        text-transform: uppercase;
+        padding: .5rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        transition: color .2s ease-in-out;
+
+        &:hover {
+            color: v.$primary;
+        }
+    }
+}
+
+.model {
+    color: v.$white;
+    margin-top: 5rem;
+    text-align: center;
+
+    @include m.tablet {
+        text-align: left;
+        width: 50%;
+    }
+
+    &__name {
+        font-size: 8rem;
+    }
+
+    &__price {
+        font-size: 6rem;
+        color: v.$primary;
+        font-weight: 900;
+        line-height: 0;
+    }
+
+    &__link {
+        margin-top: 2rem;
+        padding: 1rem 5rem;
+        border: 2px solid v.$primary;
+        color: v.$white;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+            background-color: v.$primary;
+        }
+    }
+}
