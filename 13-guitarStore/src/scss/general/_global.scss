@@ -19,20 +19,20 @@ body {
 
 /* Scroll */
 body::-webkit-scrollbar {
-    width: 12px;
+    // width: 12px;
     /* ancho de la barra de desplazamiento */
     // display: none;
 }
 
 body::-webkit-scrollbar-track {
-    background: transparent;
+    // background: transparent;
     /* color del área de desplazamiento */
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: transparentize($color: v.$primary, $amount: 0.1);
+    // background-color: transparentize($color: v.$primary, $amount: 0.1);
     /* color del botón de desplazamiento */
-    border-radius: 2rem;
+    // border-radius: 2rem;
     /* redondez del botón de desplazamiento */
     /* border: 3px solid orange;  relleno alrededor del botón de desplazamiento */
 }
@@ -41,6 +41,14 @@ body::-webkit-scrollbar-thumb {
     width: 95%;
     max-width: 120rem;
     margin: 0 auto;
+}
+
+[class$="__heading"] {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 900;
+    color: v.$primary;
+    margin: 5rem 0;
 }
 
 img {
