@@ -31,27 +31,44 @@
       </div>
     </header>
 
-    <main class="about about__container">
-      <h2 class="about__heading">About Us</h2>
-      <div class="about__grid">
+    <main class="__container">
+      <div class="product">
         <img
-          class="about__image"
-          src="build/img/nosotros.webp"
-          alt="about us image"
+          class="product__image"
+          src="build/img/guitarra_04.webp"
+          alt="product image"
         />
-        <div class="about__content">
-          <p class="about__text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
-            recusandae obcaecati, ipsam hic assumenda excepturi repellat
-            explicabo blanditiis dolorem quisquam similique eum, consequuntur
-            vel commodi! Recusandae assumenda distinctio quidem dolorem!
+
+        <div class="product__content">
+          <h3 class="product__name">Vai</h3>
+          <p class="product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam saepe
+            expedita, eum aspernatur dolorem magni ab omnis? Neque voluptas
+            porro quaerat aut sapiente luta vitae a. Hic.
           </p>
-          <p class="about__text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
-            recusandae obcaecati, ipsam hic assumenda excepturi repellat
-            explicabo blanditiis dolorem quisquam similique eum, consequuntur
-            vel commodi! Recusandae assumenda distinctio quidem dolorem!
-          </p>
+          <p class="product__price">$299</p>
+          <form class="product__form">
+            <label class="product__label">Quantity:</label>
+            <select class="product__quantity">
+              <option value="">-- Select --</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+
+            <input
+              type="submit"
+              class="product__add-to-cart"
+              value="Add to Cart"
+            />
+          </form>
         </div>
       </div>
     </main>

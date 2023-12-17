@@ -1,2 +1,45 @@
 @use 'general/variables' as v;
 @use 'general/mixins' as m;
+
+.footer {
+    margin-top: 5rem;
+    background-color: v.$black;
+    // padding: 5rem 0;
+
+    &__flex {
+
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+    }
+
+    &__link {
+        font-size: 2.8rem;
+        color: v.$white;
+        font-weight: 700;
+
+        &:hover {
+            color: v.$primary;
+        }
+    }
+
+    &__copyright {
+        font-size: 2.8rem;
+        text-align: center;
+        color: v.$white;
+        font-weight: 700;
+    }
+}

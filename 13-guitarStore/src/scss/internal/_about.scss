@@ -1,0 +1,14 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.about {
+
+    &__grid {
+        @include m.grid(1, 4rem);
+
+        @include m.tablet {
+            @include m.grid(2, 4rem);
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.courses {
+    margin-top: 10rem;
+    padding: 10rem 0;
+    background-image: linear-gradient(to right, rgb(0 0 0 / .65), rgb(0 0 0 / .65)), url(../img/cursos_bg.webp);
+    background-size: cover;
+    background-position: 50%;
+
+    &__grid {
+
+        @include m.tablet {
+            @include m.grid(2, 2rem);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include m.tablet {
+            grid-column: 2 / 3;
+        }
+    }
+
+    &__text {
+        color: v.$white;
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    &__link {
+        margin-top: 2rem;
+        color: v.$white;
+        display: inline-block;
+        border: 2px solid v.$primary;
+        padding: 1rem 5rem;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 700;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: v.$primary;
+        }
+    }
+}

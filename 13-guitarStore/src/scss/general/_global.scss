@@ -37,13 +37,13 @@ body::-webkit-scrollbar-thumb {
     /* border: 3px solid orange;  relleno alrededor del botón de desplazamiento */
 }
 
-[class$="__container"] {
+[class*="__container"] {
     width: 95%;
     max-width: 120rem;
     margin: 0 auto;
 }
 
-[class$="__heading"] {
+[class*="__heading"] {
     font-size: 4rem;
     text-align: center;
     font-weight: 900;
