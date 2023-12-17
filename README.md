@@ -104,5 +104,5 @@
 
 **You can visit it** [here](https://guitar-store-gbp.netlify.app/).
 
-> .[!NOTE].
+> [!IMPORTANT]
 > AVIF in CSS: Section 13 - 150.
